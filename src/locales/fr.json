@@ -87,7 +87,7 @@
     "backHome": "Accueil",
     "privacy": {
       "seoTitle": "Politique de confidentialité | WaterPulse",
-      "seoDescription": "Politique de confidentialité de WaterPulse : données techniques, cookies et contact.",
+      "seoDescription": "Politique de confidentialité de WaterPulse : cookies, Google AdSense et données techniques.",
       "title": "Politique de confidentialité",
       "updated": "Dernière mise à jour : 12 octobre 2026",
       "sections": [
@@ -107,7 +107,15 @@
         {
           "heading": "3. Cookies",
           "paragraphs": [
-            "WaterPulse peut utiliser le stockage local du navigateur pour mémoriser la langue choisie. Vous pouvez effacer ces données via les paramètres de votre navigateur."
+            "WaterPulse peut utiliser le stockage local du navigateur pour mémoriser la langue choisie, et des cookies tiers pour la mesure d'audience et, le cas échéant, la publicité.",
+            "Vous pouvez configurer votre navigateur pour refuser tout ou partie des cookies."
+          ]
+        },
+        {
+          "heading": "4. Google AdSense",
+          "paragraphs": [
+            "Nous utilisons Google AdSense pour afficher des publicités. Google et ses partenaires peuvent utiliser des cookies (y compris le cookie DoubleClick) pour diffuser des annonces en fonction de vos visites antérieures sur ce site et d'autres sites web.",
+            "Pour en savoir plus : https://policies.google.com/technologies/ads. Préférences publicitaires : https://adssettings.google.com."
           ]
         }
       ]

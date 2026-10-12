@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import { ArrowDown } from 'lucide-react';
+import AdBanner from '../components/AdBanner';
 import Footer from '../components/Footer';
 import FormSection from '../components/FormSection';
 import HomeSeoSections from '../components/HomeSeoSections';
@@ -106,9 +107,15 @@ export default function HomePage() {
       <main>
         <FormSection onSubmit={handleCalculate} loading={loading} />
         <ResultSection data={data} loading={loading} error={error} />
+
+        {/* Emplacement 1 — sous les résultats (forte visibilité) */}
+        <AdBanner className="mt-2" />
+
         <HomeSeoSections />
       </main>
 
+      {/* Emplacement 2 — juste avant le pied de page */}
+      <AdBanner className="mb-1" />
       <Footer />
     </div>
   );

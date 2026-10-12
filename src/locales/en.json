@@ -87,7 +87,7 @@
     "backHome": "Home",
     "privacy": {
       "seoTitle": "Privacy policy | WaterPulse",
-      "seoDescription": "WaterPulse privacy policy: technical data, cookies and contact.",
+      "seoDescription": "WaterPulse privacy policy: cookies, Google AdSense and technical data.",
       "title": "Privacy policy",
       "updated": "Last updated: 12 October 2026",
       "sections": [
@@ -107,7 +107,15 @@
         {
           "heading": "3. Cookies",
           "paragraphs": [
-            "WaterPulse may use browser local storage to remember your language choice. You can clear this data in your browser settings."
+            "WaterPulse may use browser local storage to remember your language choice, and third-party cookies for analytics and, where applicable, advertising.",
+            "You can configure your browser to refuse some or all cookies."
+          ]
+        },
+        {
+          "heading": "4. Google AdSense",
+          "paragraphs": [
+            "We use Google AdSense to show ads. Google and its partners may use cookies (including the DoubleClick cookie) to serve ads based on your prior visits to this and other sites.",
+            "Learn more: https://policies.google.com/technologies/ads. Ad settings: https://adssettings.google.com."
           ]
         }
       ]
