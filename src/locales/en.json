@@ -1,13 +1,13 @@
 {
   "seo": {
     "title": "Free Rainwater Harvesting Calculator | Tank Sizing & Savings | WaterPulse",
-    "description": "Free rainwater collection simulator and calculator. Estimate roof runoff volume, optimal storage tank size, and annual water savings for your home.",
-    "keywords": "rainwater calculator, rainwater harvesting, rainwater tank, water autonomy, tank sizing, water savings, precipitation",
+    "description": "Free rainwater harvester calculator: estimate roof runoff, tank size, water autonomy and savings for garden, vegetable patch or an off-grid home.",
+    "keywords": "rainwater harvester, rainwater calculator, rainwater harvesting, potable rainwater, water autonomy, save water, roof area, automatic irrigation, vegetable garden, garden, rainwater tank, DIY guide, off-grid home, self-sufficiency, living off-grid, drinking water, drought, resilience, tank sizing, water savings",
     "featureList": [
-      "Free rainwater harvesting calculator",
-      "Tank sizing by location",
-      "Autonomy and water savings estimate",
-      "Average rainfall via Open-Meteo"
+      "Free rainwater harvester calculator",
+      "Tank sizing from roof area and location",
+      "Water autonomy for garden, patch and savings",
+      "Drought resilience planning aid"
     ]
   },
   "nav": {
@@ -17,35 +17,35 @@
   },
   "hero": {
     "title": "Free rainwater calculator",
-    "subtitle": "Size your tank and estimate autonomy from your roof, household and local rainfall.",
+    "subtitle": "Size your tank and water autonomy from your roof: garden, vegetable patch, savings and drought resilience.",
     "cta": "Start the calculation"
   },
   "homeSeo": {
     "intro": {
-      "title": "Rainwater harvesting: size your tank and autonomy",
-      "body": "WaterPulse is a free rainwater harvesting calculator. Enter your location, roof area and uses (toilet, laundry, garden) to estimate collectable water, yearly needs and a recommended tank volume for about 21 days of reserve."
+      "title": "Rainwater harvester: tank, autonomy and savings",
+      "body": "WaterPulse is a free calculator to size a rainwater harvester. Enter your location, roof area and uses (garden, vegetable patch, toilet, laundry) to estimate collectable water, save water and improve water autonomy — useful for an off-grid home, self-sufficiency or drought resilience. The recommended tank volume covers about 21 days of reserve."
     },
     "how": {
       "title": "How to size a rainwater tank?",
-      "lead": "In a few steps, get a clear estimate for your water autonomy project.",
+      "lead": "In a few steps, get a clear estimate for water autonomy, irrigation or a DIY home project.",
       "steps": [
         {
           "title": "1. Locate your roof",
-          "body": "Pick a country and city, or use the map and GPS. WaterPulse fetches average yearly rainfall (mm) via Open-Meteo."
+          "body": "Pick a country and city, or use the map and GPS. WaterPulse fetches average yearly rainfall (mm) via Open-Meteo to estimate your roof potential."
         },
         {
           "title": "2. Describe roof and uses",
-          "body": "Enter roof area in m², roof type (tiles, flat, metal), household size and target uses: garden, toilet, laundry."
+          "body": "Enter roof area in m², roof type (tiles, flat, metal), household size and uses: garden, vegetable patch / irrigation, toilet, laundry — to save more water day to day."
         },
         {
           "title": "3. Review tank and autonomy",
-          "body": "The calculator shows collectable water, needs, recommended tank volume and an indicative autonomy percentage."
+          "body": "The calculator shows collectable water, needs, recommended tank volume and an indicative water autonomy percentage toward greater self-sufficiency."
         }
       ]
     },
     "faq": {
       "title": "Frequently asked questions",
-      "lead": "Short answers to get the most from this rainwater calculator.",
+      "lead": "Short answers to get the most from this rainwater harvester calculator.",
       "items": [
         {
           "question": "How is collectable water calculated?",
@@ -53,7 +53,15 @@
         },
         {
           "question": "How is tank volume chosen?",
-          "answer": "The recommended volume is about 21 days of reserve based on the minimum of collectable water and yearly needs, then rounded to a common tank size."
+          "answer": "The recommended tank volume is about 21 days of reserve based on the minimum of collectable water and yearly needs, then rounded to a common size — useful for a DIY guide or installer quote."
+        },
+        {
+          "question": "Is rainwater potable / drinking water?",
+          "answer": "Collected rainwater is generally not potable without proper treatment. WaterPulse mainly sizes non-potable uses (garden, vegetable patch, automatic irrigation, toilet, laundry). For drinking water or an off-grid home, have the system validated by a professional."
+        },
+        {
+          "question": "Does this help with drought?",
+          "answer": "Indicatively yes: storing rainwater improves resilience and water autonomy in dry periods, without replacing a full local study."
         },
         {
           "question": "Where does rainfall data come from?",
@@ -61,7 +69,7 @@
         },
         {
           "question": "Do results replace a professional study?",
-          "answer": "No. WaterPulse provides an indicative estimate. A site survey remains necessary for a final design."
+          "answer": "No. WaterPulse provides an estimate to prepare a self-sufficiency or harvester project. A site survey remains necessary for a final design."
         }
       ]
     }

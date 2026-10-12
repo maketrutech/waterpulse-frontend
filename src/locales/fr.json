@@ -1,13 +1,13 @@
 {
   "seo": {
     "title": "Calculateur Eau de Pluie Gratuit | Dimensionnement & Cuve | WaterPulse",
-    "description": "Simulateur et calculateur gratuit de récupération d'eau de pluie. Calculez le volume d'eau collectable sur votre toit, la taille de cuve idéale et vos économies.",
-    "keywords": "calculateur eau de pluie, récupération eau de pluie, cuve eau de pluie, autonomie eau, dimensionnement cuve, économies d'eau, précipitations",
+    "description": "Calculateur gratuit de récupérateur d'eau de pluie : estimez l'eau collectable sur votre toiture, la taille de cuve, l'autonomie en eau et vos économies pour jardin, potager ou maison autonome.",
+    "keywords": "récupérateur d'eau de pluie, calculateur eau de pluie, récupération eau de pluie, eau de pluie potable, autonomie en eau, économiser l'eau, toiture, arrosage automatique, potager, jardin, cuve, tuto bricolage, maison autonome, autosuffisance, vivre en autonomie, eau potable, sécheresse, résilience, dimensionnement cuve, économies d'eau",
     "featureList": [
-      "Calculateur de récupération d'eau de pluie gratuit",
-      "Dimensionnement de cuve selon la ville",
-      "Estimation autonomie et économies d'eau",
-      "Précipitations moyennes via Open-Meteo"
+      "Calculateur de récupérateur d'eau de pluie gratuit",
+      "Dimensionnement de cuve selon toiture et ville",
+      "Autonomie en eau, jardin, potager et économies",
+      "Aide à la résilience face à la sécheresse"
     ]
   },
   "nav": {
@@ -17,43 +17,51 @@
   },
   "hero": {
     "title": "Calculateur d'eau de pluie gratuit",
-    "subtitle": "Dimensionnez votre cuve et estimez votre autonomie selon votre toiture, votre foyer et les précipitations locales.",
+    "subtitle": "Dimensionnez votre cuve et votre autonomie en eau selon la toiture : jardin, potager, économies et résilience face à la sécheresse.",
     "cta": "Lancer le calcul"
   },
   "homeSeo": {
     "intro": {
-      "title": "Récupération d'eau de pluie : calculez cuve et autonomie",
-      "body": "WaterPulse est un calculateur gratuit de récupération d'eau de pluie. Indiquez votre localisation, la surface de toiture et vos usages (WC, lave-linge, jardin) pour estimer l'eau collectable, vos besoins annuels et le volume de cuve recommandé pour une réserve d'environ 21 jours."
+      "title": "Récupérateur d'eau de pluie : cuve, autonomie et économies",
+      "body": "WaterPulse est un calculateur gratuit pour dimensionner un récupérateur d'eau de pluie. Indiquez votre localisation, la surface de toiture et vos usages (jardin, potager, WC, lave-linge) pour estimer l'eau collectable, économiser l'eau et viser plus d'autonomie en eau — utile aussi pour une maison autonome, l'autosuffisance ou la résilience en période de sécheresse. Le volume de cuve recommandé correspond à une réserve d'environ 21 jours."
     },
     "how": {
       "title": "Comment dimensionner une cuve d'eau de pluie ?",
-      "lead": "En quelques étapes, obtenez une estimation claire pour votre projet d'autonomie eau.",
+      "lead": "En quelques étapes, obtenez une estimation claire pour votre projet d'autonomie en eau, d'arrosage ou de bricolage maison.",
       "steps": [
         {
-          "title": "1. Localisez votre toit",
-          "body": "Choisissez un pays et une ville, ou utilisez la carte et le GPS. WaterPulse récupère les précipitations moyennes annuelles (mm) via Open-Meteo."
+          "title": "1. Localisez votre toiture",
+          "body": "Choisissez un pays et une ville, ou utilisez la carte et le GPS. WaterPulse récupère les précipitations moyennes annuelles (mm) via Open-Meteo pour estimer le potentiel de votre toiture."
         },
         {
           "title": "2. Décrivez toiture et usages",
-          "body": "Saisissez la surface en m², le type de toit (tuiles, plat, métal), le nombre de personnes et les usages ciblés : jardin, WC, lave-linge."
+          "body": "Saisissez la surface en m², le type de toit (tuiles, plat, métal), le nombre de personnes et les usages : jardin, potager / arrosage, WC, lave-linge — pour mieux économiser l'eau au quotidien."
         },
         {
           "title": "3. Lisez cuve et autonomie",
-          "body": "Le calculateur affiche l'eau collectable, les besoins, le volume de cuve recommandé et le pourcentage d'autonomie indicatif."
+          "body": "Le calculateur affiche l'eau collectable, les besoins, le volume de cuve recommandé et le pourcentage d'autonomie en eau indicatif pour avancer vers plus d'autosuffisance."
         }
       ]
     },
     "faq": {
       "title": "Questions fréquentes",
-      "lead": "Réponses courtes pour mieux utiliser ce calculateur d'eau de pluie.",
+      "lead": "Réponses courtes pour mieux utiliser ce calculateur de récupérateur d'eau de pluie.",
       "items": [
         {
           "question": "Comment est calculée l'eau collectable ?",
-          "answer": "Eau collectable (L/an) = surface (m²) × précipitations (mm) × coefficient de toiture × 0,9 (filtration). Un millimètre d'eau sur 1 m² représente 1 litre."
+          "answer": "Eau collectable (L/an) = surface de toiture (m²) × précipitations (mm) × coefficient de toiture × 0,9 (filtration). Un millimètre d'eau sur 1 m² représente 1 litre."
         },
         {
           "question": "Comment est choisi le volume de cuve ?",
-          "answer": "Le volume recommandé correspond à une réserve d'environ 21 jours, calculée sur le minimum entre l'eau collectable et vos besoins annuels, puis arrondie à une taille de cuve courante."
+          "answer": "Le volume de cuve recommandé correspond à une réserve d'environ 21 jours, calculée sur le minimum entre l'eau collectable et vos besoins annuels, puis arrondie à une taille courante — pratique pour un tuto bricolage ou un devis installateur."
+        },
+        {
+          "question": "L'eau de pluie est-elle potable ?",
+          "answer": "L'eau de pluie collectée n'est en général pas potable sans traitement adapté. WaterPulse dimensionne surtout les usages non potables (jardin, potager, arrosage automatique, WC, lave-linge). Pour de l'eau potable ou un projet de maison autonome, faites valider le système par un professionnel."
+        },
+        {
+          "question": "Cela aide-t-il face à la sécheresse ?",
+          "answer": "Oui, de façon indicative : stocker l'eau de pluie améliore la résilience et l'autonomie en eau pendant les périodes sèches, sans remplacer une étude locale complète."
         },
         {
           "question": "D'où viennent les précipitations ?",
@@ -61,7 +69,7 @@
         },
         {
           "question": "Les résultats remplacent-ils une étude professionnelle ?",
-          "answer": "Non. WaterPulse fournit une estimation indicative pour préparer un projet. Une étude terrain reste nécessaire pour un dimensionnement définitif."
+          "answer": "Non. WaterPulse fournit une estimation pour préparer un projet d'autosuffisance ou de récupérateur. Une étude terrain reste nécessaire pour un dimensionnement définitif."
         }
       ]
     }
