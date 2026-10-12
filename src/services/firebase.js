@@ -1,18 +1,25 @@
 /**
- * Firebase WaterPulse — app web + Analytics (projet solarpulse-676e1).
+ * Firebase WaterPulse — config via variables d'environnement Vite (VITE_*).
+ * Les clés web restent visibles dans le bundle client (restriction domaine Firebase).
  */
 import { initializeApp } from 'firebase/app';
 import { getAnalytics, isSupported } from 'firebase/analytics';
 
 const firebaseConfig = {
-  apiKey: 'AIzaSyCqyPqDZkwrpiGpSp1KsMSVj2HQFuMb2bE',
-  authDomain: 'solarpulse-676e1.firebaseapp.com',
-  projectId: 'solarpulse-676e1',
-  storageBucket: 'solarpulse-676e1.firebasestorage.app',
-  messagingSenderId: '678975142088',
-  appId: '1:678975142088:web:0419eaab6659d61d408dfd',
-  measurementId: 'G-RB9KVNQ6RE',
+  apiKey: import.meta.env.VITE_FIREBASE_API_KEY,
+  authDomain: import.meta.env.VITE_FIREBASE_AUTH_DOMAIN,
+  projectId: import.meta.env.VITE_FIREBASE_PROJECT_ID,
+  storageBucket: import.meta.env.VITE_FIREBASE_STORAGE_BUCKET,
+  messagingSenderId: import.meta.env.VITE_FIREBASE_MESSAGING_SENDER_ID,
+  appId: import.meta.env.VITE_FIREBASE_APP_ID,
+  measurementId: import.meta.env.VITE_FIREBASE_MEASUREMENT_ID,
 };
+
+if (!firebaseConfig.apiKey || !firebaseConfig.projectId || !firebaseConfig.appId) {
+  console.warn(
+    '[Firebase] Config incomplète : définis les variables VITE_FIREBASE_* dans .env / .env.production'
+  );
+}
 
 export const app = initializeApp(firebaseConfig);
 
