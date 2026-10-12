@@ -1,0 +1,218 @@
+{
+  "seo": {
+    "title": "Calculateur d'Eau de Pluie Gratuit | Dimensionnement & Autonomie",
+    "description": "Calculez gratuitement la taille idéale de votre cuve de récupération d'eau de pluie et vos économies d'eau annuelles selon votre ville.",
+    "keywords": "calculateur eau de pluie, récupération eau de pluie, cuve eau de pluie, autonomie eau, dimensionnement cuve, économies d'eau, précipitations",
+    "featureList": [
+      "Calculateur de récupération d'eau de pluie gratuit",
+      "Dimensionnement de cuve selon la ville",
+      "Estimation autonomie et économies d'eau",
+      "Précipitations moyennes via Open-Meteo"
+    ]
+  },
+  "nav": {
+    "brand": "WaterPulse",
+    "language": "Langue",
+    "switchTo": "Changer de langue"
+  },
+  "hero": {
+    "title": "Calculateur d'eau de pluie gratuit",
+    "subtitle": "Dimensionnez votre cuve et estimez votre autonomie selon votre toiture, votre foyer et les précipitations locales.",
+    "cta": "Lancer le calcul"
+  },
+  "homeSeo": {
+    "intro": {
+      "title": "Récupération d'eau de pluie : calculez cuve et autonomie",
+      "body": "WaterPulse est un calculateur gratuit de récupération d'eau de pluie. Indiquez votre localisation, la surface de toiture et vos usages (WC, lave-linge, jardin) pour estimer l'eau collectable, vos besoins annuels et le volume de cuve recommandé pour une réserve d'environ 21 jours."
+    },
+    "how": {
+      "title": "Comment dimensionner une cuve d'eau de pluie ?",
+      "lead": "En quelques étapes, obtenez une estimation claire pour votre projet d'autonomie eau.",
+      "steps": [
+        {
+          "title": "1. Localisez votre toit",
+          "body": "Choisissez un pays et une ville, ou utilisez la carte et le GPS. WaterPulse récupère les précipitations moyennes annuelles (mm) via Open-Meteo."
+        },
+        {
+          "title": "2. Décrivez toiture et usages",
+          "body": "Saisissez la surface en m², le type de toit (tuiles, plat, métal), le nombre de personnes et les usages ciblés : jardin, WC, lave-linge."
+        },
+        {
+          "title": "3. Lisez cuve et autonomie",
+          "body": "Le calculateur affiche l'eau collectable, les besoins, le volume de cuve recommandé et le pourcentage d'autonomie indicatif."
+        }
+      ]
+    },
+    "faq": {
+      "title": "Questions fréquentes",
+      "lead": "Réponses courtes pour mieux utiliser ce calculateur d'eau de pluie.",
+      "items": [
+        {
+          "question": "Comment est calculée l'eau collectable ?",
+          "answer": "Eau collectable (L/an) = surface (m²) × précipitations (mm) × coefficient de toiture × 0,9 (filtration). Un millimètre d'eau sur 1 m² représente 1 litre."
+        },
+        {
+          "question": "Comment est choisi le volume de cuve ?",
+          "answer": "Le volume recommandé correspond à une réserve d'environ 21 jours, calculée sur le minimum entre l'eau collectable et vos besoins annuels, puis arrondie à une taille de cuve courante."
+        },
+        {
+          "question": "D'où viennent les précipitations ?",
+          "answer": "Les moyennes sont dérivées de l'Archive API Open-Meteo (historique multi-années) pour votre latitude et longitude."
+        },
+        {
+          "question": "Les résultats remplacent-ils une étude professionnelle ?",
+          "answer": "Non. WaterPulse fournit une estimation indicative pour préparer un projet. Une étude terrain reste nécessaire pour un dimensionnement définitif."
+        }
+      ]
+    }
+  },
+  "footer": {
+    "credit": "Précipitations fournies via l'API Open-Meteo. Calculateur indicatif — non contractuel.",
+    "legalNav": "Informations légales",
+    "links": {
+      "about": "À propos",
+      "privacy": "Confidentialité",
+      "terms": "Conditions d'utilisation"
+    }
+  },
+  "legal": {
+    "backHome": "Accueil",
+    "privacy": {
+      "seoTitle": "Politique de confidentialité | WaterPulse",
+      "seoDescription": "Politique de confidentialité de WaterPulse : données techniques, cookies et contact.",
+      "title": "Politique de confidentialité",
+      "updated": "Dernière mise à jour : 12 octobre 2026",
+      "sections": [
+        {
+          "heading": "1. Qui sommes-nous ?",
+          "paragraphs": [
+            "WaterPulse (https://waterpulse.maketru.com) est un calculateur en ligne gratuit de récupération d'eau de pluie et de dimensionnement de cuve.",
+            "Contact : contact@maketru.com."
+          ]
+        },
+        {
+          "heading": "2. Données collectées",
+          "paragraphs": [
+            "Lorsque vous utilisez le calculateur, les paramètres techniques (latitude, longitude, surface, usages) sont transmis à notre serveur puis à Open-Meteo afin d'obtenir les précipitations. Ces données ne sont pas utilisées pour vous identifier personnellement."
+          ]
+        },
+        {
+          "heading": "3. Cookies",
+          "paragraphs": [
+            "WaterPulse peut utiliser le stockage local du navigateur pour mémoriser la langue choisie. Vous pouvez effacer ces données via les paramètres de votre navigateur."
+          ]
+        }
+      ]
+    },
+    "terms": {
+      "seoTitle": "Conditions d'utilisation | WaterPulse",
+      "seoDescription": "Conditions générales d'utilisation du calculateur d'eau de pluie WaterPulse.",
+      "title": "Conditions d'utilisation",
+      "updated": "Dernière mise à jour : 12 octobre 2026",
+      "sections": [
+        {
+          "heading": "1. Objet",
+          "paragraphs": [
+            "WaterPulse fournit une estimation indicative de récupération d'eau de pluie, de besoins et de volume de cuve. Les résultats ne constituent pas un dimensionnement professionnel."
+          ]
+        },
+        {
+          "heading": "2. Responsabilité",
+          "paragraphs": [
+            "Les précipitations et calculs dépendent de données tierces et d'hypothèses simplifiées. L'utilisateur reste responsable de toute décision d'investissement ou d'installation."
+          ]
+        }
+      ]
+    },
+    "about": {
+      "seoTitle": "À propos | WaterPulse",
+      "seoDescription": "Découvrez WaterPulse, le calculateur gratuit de récupération d'eau de pluie et d'autonomie.",
+      "title": "À propos de WaterPulse",
+      "subtitle": "Un outil simple pour dimensionner votre cuve d'eau de pluie.",
+      "paragraphs": [
+        "WaterPulse aide particuliers et porteurs de projets à estimer l'eau collectable sur leur toiture, leurs besoins (WC, lave-linge, jardin) et une taille de cuve réaliste.",
+        "Les précipitations moyennes proviennent d'Open-Meteo. Les calculs appliquent des coefficients de toiture et une filtration de 90 %.",
+        "Contact : contact@maketru.com"
+      ],
+      "contactTitle": "Nous contacter",
+      "contactIntro": "Une question ? Écrivez-nous à",
+      "name": "Nom",
+      "namePlaceholder": "Votre nom",
+      "message": "Message",
+      "messagePlaceholder": "Votre message…",
+      "send": "Envoyer par e-mail",
+      "mailSubject": "Contact WaterPulse — {{name}}",
+      "mailFrom": "De : {{name}}"
+    }
+  },
+  "form": {
+    "formLabel": "Formulaire de calcul eau de pluie",
+    "title": "Paramètres de votre projet",
+    "subtitle": "Localisation, toiture, foyer et usages pour dimensionner la cuve.",
+    "locationIconLabel": "Localisation",
+    "country": "Pays",
+    "city": "Ville",
+    "searchCountry": "Rechercher un pays…",
+    "searchCity": "Rechercher une ville…",
+    "customPosition": "Position personnalisée",
+    "noResults": "Aucun résultat",
+    "useMyLocation": "Utiliser ma position",
+    "locating": "Localisation…",
+    "mapLabel": "Carte du site",
+    "mapHint": "Cliquez ou déplacez le marqueur pour affiner la position.",
+    "mapLoading": "Chargement de la carte…",
+    "markerAlt": "Position du site",
+    "surface": "Surface de toiture",
+    "people": "Taille du foyer",
+    "roofType": "Type de toit",
+    "roofHint": "Le coefficient influence l'eau réellement collectée.",
+    "roofs": {
+      "tiles": { "label": "Tuiles", "hint": "Coef. {{coef}}" },
+      "flat": { "label": "Toit plat", "hint": "Coef. {{coef}}" },
+      "metal": { "label": "Métal", "hint": "Coef. {{coef}}" }
+    },
+    "usages": "Usages de l'eau récupérée",
+    "usagesHint": "Cochez les usages pour estimer vos besoins annuels.",
+    "usageOptions": {
+      "wc": "WC",
+      "laundry": "Lave-linge",
+      "garden": "Jardin"
+    },
+    "preciseCoords": "Coordonnées précises",
+    "latitude": "Latitude",
+    "longitude": "Longitude",
+    "submit": "Calculer ma cuve",
+    "calculating": "Calcul en cours…",
+    "geo": {
+      "unsupported": "La géolocalisation n'est pas supportée par ce navigateur.",
+      "success": "Position mise à jour.",
+      "denied": "Permission de géolocalisation refusée.",
+      "unavailable": "Position indisponible.",
+      "timeout": "Délai de géolocalisation dépassé.",
+      "generic": "Impossible d'obtenir votre position."
+    }
+  },
+  "results": {
+    "analyzing": "Analyse des précipitations…",
+    "analyzingHint": "Récupération Open-Meteo et calcul de votre cuve.",
+    "errorTitle": "Une erreur est survenue",
+    "empty": "Lancez un calcul pour voir la cuve recommandée et votre autonomie.",
+    "rainfall": "Précipitations",
+    "rainfallUnit": "mm/an",
+    "tank": "Cuve recommandée",
+    "tankHint": "Réserve ≈ 21 jours, arrondie à une taille courante.",
+    "collectable": "Eau collectable",
+    "autonomy": "Autonomie",
+    "needs": "Besoins",
+    "savings": "Économies potentielles",
+    "liters": "L",
+    "litersYear": "L/an",
+    "monthlyTitle": "Pluie mensuelle moyenne",
+    "months": ["J", "F", "M", "A", "M", "J", "J", "A", "S", "O", "N", "D"]
+  },
+  "errors": {
+    "network": "Impossible de joindre le serveur API.",
+    "invalidJson": "Réponse invalide du serveur.",
+    "unexpected": "Une erreur inattendue est survenue."
+  }
+}

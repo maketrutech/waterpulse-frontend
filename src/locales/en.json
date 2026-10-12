@@ -1,0 +1,218 @@
+{
+  "seo": {
+    "title": "Free Rainwater Calculator | Tank Sizing & Autonomy",
+    "description": "Freely size your rainwater harvesting tank and estimate yearly water savings for your city.",
+    "keywords": "rainwater calculator, rainwater harvesting, rainwater tank, water autonomy, tank sizing, water savings, precipitation",
+    "featureList": [
+      "Free rainwater harvesting calculator",
+      "Tank sizing by location",
+      "Autonomy and water savings estimate",
+      "Average rainfall via Open-Meteo"
+    ]
+  },
+  "nav": {
+    "brand": "WaterPulse",
+    "language": "Language",
+    "switchTo": "Switch language"
+  },
+  "hero": {
+    "title": "Free rainwater calculator",
+    "subtitle": "Size your tank and estimate autonomy from your roof, household and local rainfall.",
+    "cta": "Start the calculation"
+  },
+  "homeSeo": {
+    "intro": {
+      "title": "Rainwater harvesting: size your tank and autonomy",
+      "body": "WaterPulse is a free rainwater harvesting calculator. Enter your location, roof area and uses (toilet, laundry, garden) to estimate collectable water, yearly needs and a recommended tank volume for about 21 days of reserve."
+    },
+    "how": {
+      "title": "How to size a rainwater tank?",
+      "lead": "In a few steps, get a clear estimate for your water autonomy project.",
+      "steps": [
+        {
+          "title": "1. Locate your roof",
+          "body": "Pick a country and city, or use the map and GPS. WaterPulse fetches average yearly rainfall (mm) via Open-Meteo."
+        },
+        {
+          "title": "2. Describe roof and uses",
+          "body": "Enter roof area in m², roof type (tiles, flat, metal), household size and target uses: garden, toilet, laundry."
+        },
+        {
+          "title": "3. Review tank and autonomy",
+          "body": "The calculator shows collectable water, needs, recommended tank volume and an indicative autonomy percentage."
+        }
+      ]
+    },
+    "faq": {
+      "title": "Frequently asked questions",
+      "lead": "Short answers to get the most from this rainwater calculator.",
+      "items": [
+        {
+          "question": "How is collectable water calculated?",
+          "answer": "Collectable water (L/year) = roof area (m²) × rainfall (mm) × roof coefficient × 0.9 (filtration). One millimetre on 1 m² equals 1 litre."
+        },
+        {
+          "question": "How is tank volume chosen?",
+          "answer": "The recommended volume is about 21 days of reserve based on the minimum of collectable water and yearly needs, then rounded to a common tank size."
+        },
+        {
+          "question": "Where does rainfall data come from?",
+          "answer": "Averages are derived from the Open-Meteo Archive API (multi-year history) for your latitude and longitude."
+        },
+        {
+          "question": "Do results replace a professional study?",
+          "answer": "No. WaterPulse provides an indicative estimate. A site survey remains necessary for a final design."
+        }
+      ]
+    }
+  },
+  "footer": {
+    "credit": "Rainfall data via the Open-Meteo API. Indicative calculator — non-binding.",
+    "legalNav": "Legal information",
+    "links": {
+      "about": "About",
+      "privacy": "Privacy",
+      "terms": "Terms of use"
+    }
+  },
+  "legal": {
+    "backHome": "Home",
+    "privacy": {
+      "seoTitle": "Privacy policy | WaterPulse",
+      "seoDescription": "WaterPulse privacy policy: technical data, cookies and contact.",
+      "title": "Privacy policy",
+      "updated": "Last updated: 12 October 2026",
+      "sections": [
+        {
+          "heading": "1. Who we are",
+          "paragraphs": [
+            "WaterPulse (https://waterpulse.maketru.com) is a free online rainwater harvesting and tank sizing calculator.",
+            "Contact: contact@maketru.com."
+          ]
+        },
+        {
+          "heading": "2. Data collected",
+          "paragraphs": [
+            "When you use the calculator, technical parameters (latitude, longitude, area, uses) are sent to our server and Open-Meteo to fetch rainfall. This data is not used to identify you personally."
+          ]
+        },
+        {
+          "heading": "3. Cookies",
+          "paragraphs": [
+            "WaterPulse may use browser local storage to remember your language choice. You can clear this data in your browser settings."
+          ]
+        }
+      ]
+    },
+    "terms": {
+      "seoTitle": "Terms of use | WaterPulse",
+      "seoDescription": "Terms of use for the WaterPulse rainwater calculator.",
+      "title": "Terms of use",
+      "updated": "Last updated: 12 October 2026",
+      "sections": [
+        {
+          "heading": "1. Purpose",
+          "paragraphs": [
+            "WaterPulse provides an indicative estimate of rainwater harvesting, needs and tank volume. Results are not a professional design."
+          ]
+        },
+        {
+          "heading": "2. Liability",
+          "paragraphs": [
+            "Rainfall and calculations depend on third-party data and simplified assumptions. You remain responsible for any investment or installation decision."
+          ]
+        }
+      ]
+    },
+    "about": {
+      "seoTitle": "About | WaterPulse",
+      "seoDescription": "Discover WaterPulse, the free rainwater harvesting and autonomy calculator.",
+      "title": "About WaterPulse",
+      "subtitle": "A simple tool to size your rainwater tank.",
+      "paragraphs": [
+        "WaterPulse helps households estimate collectable roof water, needs (toilet, laundry, garden) and a realistic tank size.",
+        "Average rainfall comes from Open-Meteo. Calculations apply roof coefficients and 90% filtration.",
+        "Contact: contact@maketru.com"
+      ],
+      "contactTitle": "Contact us",
+      "contactIntro": "Have a question? Email us at",
+      "name": "Name",
+      "namePlaceholder": "Your name",
+      "message": "Message",
+      "messagePlaceholder": "Your message…",
+      "send": "Send by email",
+      "mailSubject": "WaterPulse contact — {{name}}",
+      "mailFrom": "From: {{name}}"
+    }
+  },
+  "form": {
+    "formLabel": "Rainwater calculation form",
+    "title": "Your project settings",
+    "subtitle": "Location, roof, household and uses to size the tank.",
+    "locationIconLabel": "Location",
+    "country": "Country",
+    "city": "City",
+    "searchCountry": "Search a country…",
+    "searchCity": "Search a city…",
+    "customPosition": "Custom position",
+    "noResults": "No results",
+    "useMyLocation": "Use my location",
+    "locating": "Locating…",
+    "mapLabel": "Site map",
+    "mapHint": "Click or drag the marker to refine the position.",
+    "mapLoading": "Loading map…",
+    "markerAlt": "Site position",
+    "surface": "Roof area",
+    "people": "Household size",
+    "roofType": "Roof type",
+    "roofHint": "The coefficient affects how much water is actually collected.",
+    "roofs": {
+      "tiles": { "label": "Tiles", "hint": "Coef. {{coef}}" },
+      "flat": { "label": "Flat roof", "hint": "Coef. {{coef}}" },
+      "metal": { "label": "Metal", "hint": "Coef. {{coef}}" }
+    },
+    "usages": "Rainwater uses",
+    "usagesHint": "Select uses to estimate yearly needs.",
+    "usageOptions": {
+      "wc": "Toilet",
+      "laundry": "Laundry",
+      "garden": "Garden"
+    },
+    "preciseCoords": "Precise coordinates",
+    "latitude": "Latitude",
+    "longitude": "Longitude",
+    "submit": "Calculate my tank",
+    "calculating": "Calculating…",
+    "geo": {
+      "unsupported": "Geolocation is not supported by this browser.",
+      "success": "Position updated.",
+      "denied": "Geolocation permission denied.",
+      "unavailable": "Position unavailable.",
+      "timeout": "Geolocation timed out.",
+      "generic": "Unable to get your position."
+    }
+  },
+  "results": {
+    "analyzing": "Analyzing rainfall…",
+    "analyzingHint": "Fetching Open-Meteo data and sizing your tank.",
+    "errorTitle": "Something went wrong",
+    "empty": "Run a calculation to see the recommended tank and your autonomy.",
+    "rainfall": "Rainfall",
+    "rainfallUnit": "mm/year",
+    "tank": "Recommended tank",
+    "tankHint": "≈ 21-day reserve, rounded to a common size.",
+    "collectable": "Collectable water",
+    "autonomy": "Autonomy",
+    "needs": "Needs",
+    "savings": "Potential savings",
+    "liters": "L",
+    "litersYear": "L/year",
+    "monthlyTitle": "Average monthly rainfall",
+    "months": ["J", "F", "M", "A", "M", "J", "J", "A", "S", "O", "N", "D"]
+  },
+  "errors": {
+    "network": "Unable to reach the API server.",
+    "invalidJson": "Invalid server response.",
+    "unexpected": "An unexpected error occurred."
+  }
+}

@@ -1,0 +1,15 @@
+{
+  "projects": {
+    "default": "solarpulse-676e1"
+  },
+  "targets": {
+    "solarpulse-676e1": {
+      "hosting": {
+        "waterpulse": [
+          "waterpulse"
+        ]
+      }
+    }
+  },
+  "etags": {}
+}

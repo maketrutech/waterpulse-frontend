@@ -1,0 +1,16 @@
+# Dependencies
+node_modules
+
+# Build
+dist
+dist-ssr
+
+# Env locaux (garder .env.example si besoin)
+.env.local
+.env.*.local
+
+# Logs & cache
+*.log
+npm-debug.log*
+.DS_Store
+.vite

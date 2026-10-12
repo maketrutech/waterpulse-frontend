@@ -1,0 +1,48 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply font-body text-ink antialiased;
+    background-color: #e6f4f8;
+    background-image:
+      radial-gradient(ellipse 80% 50% at 10% -10%, rgba(56, 189, 248, 0.22), transparent 55%),
+      radial-gradient(ellipse 60% 40% at 90% 0%, rgba(20, 184, 166, 0.16), transparent 50%),
+      linear-gradient(180deg, #e6f4f8 0%, #f0fafc 45%, #e6f4f8 100%);
+    min-height: 100vh;
+  }
+
+  ::selection {
+    background: rgba(56, 189, 248, 0.35);
+  }
+}
+
+@layer components {
+  .touch-target {
+    @apply min-h-12 min-w-12;
+  }
+
+  .input-field {
+    @apply w-full min-h-12 rounded-xl border border-sky-mid/20 bg-white px-4 py-3 text-ink
+      shadow-sm outline-none transition
+      placeholder:text-sky-deep/45
+      focus:border-sky-mid focus:ring-2 focus:ring-sky-mid/25;
+  }
+
+  .label-field {
+    @apply mb-1.5 block text-sm font-semibold text-sky-deep;
+  }
+
+  .text-on-dark {
+    @apply text-white;
+  }
+
+  .text-on-dark-muted {
+    color: rgba(255, 255, 255, 0.92);
+  }
+}
