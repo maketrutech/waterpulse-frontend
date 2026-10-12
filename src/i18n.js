@@ -1,5 +1,6 @@
 /**
  * Configuration i18next — FR / EN (WaterPulse)
+ * Priorité : ?lang=en dans l'URL > localStorage > html lang > navigateur
  */
 
 import i18n from 'i18next';
@@ -8,6 +9,7 @@ import LanguageDetector from 'i18next-browser-languagedetector';
 
 import fr from './locales/fr.json';
 import en from './locales/en.json';
+import { readLangFromSearch } from './utils/langUrl';
 
 i18n
   .use(LanguageDetector)
@@ -24,10 +26,18 @@ i18n
       escapeValue: false,
     },
     detection: {
-      order: ['localStorage', 'htmlTag', 'navigator'],
+      // querystring (?lang=en) en premier pour Googlebot / partages SEO
+      order: ['querystring', 'localStorage', 'htmlTag', 'navigator'],
       caches: ['localStorage'],
+      lookupQuerystring: 'lang',
       lookupLocalStorage: 'waterpulse_lang',
     },
   });
+
+// Alignement immédiat si l'URL impose déjà une langue
+const urlLang = typeof window !== 'undefined' ? readLangFromSearch() : null;
+if (urlLang && i18n.language?.slice(0, 2) !== urlLang) {
+  i18n.changeLanguage(urlLang);
+}
 
 export default i18n;

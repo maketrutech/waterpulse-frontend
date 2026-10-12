@@ -1,4 +1,5 @@
 import { useTranslation } from 'react-i18next';
+import { syncUrlWithLang } from '../utils/langUrl';
 
 const LANGUAGES = [
   { code: 'fr', label: 'FR' },
@@ -6,7 +7,7 @@ const LANGUAGES = [
 ];
 
 /**
- * Sélecteur FR | EN — persiste via i18next (localStorage).
+ * Sélecteur FR | EN — synchronise i18n, localStorage et ?lang= dans l'URL.
  */
 export default function LanguageSwitcher() {
   const { i18n, t } = useTranslation();
@@ -14,6 +15,7 @@ export default function LanguageSwitcher() {
 
   const setLanguage = (code) => {
     i18n.changeLanguage(code);
+    syncUrlWithLang(code);
   };
 
   return (

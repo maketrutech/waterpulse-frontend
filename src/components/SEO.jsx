@@ -1,11 +1,11 @@
 import { Helmet } from 'react-helmet-async';
 import { useTranslation } from 'react-i18next';
+import { SITE_URL, buildLangHref } from '../utils/langUrl';
 
-const SITE_URL = 'https://waterpulse.maketru.com';
 const DEFAULT_OG_IMAGE = `${SITE_URL}/og-image.png`;
 
 /**
- * Métadonnées SEO dynamiques selon la langue active (FR / EN).
+ * Métadonnées SEO dynamiques FR / EN + hreflang distincts.
  */
 export default function SEO({
   title: titleProp,
@@ -23,13 +23,17 @@ export default function SEO({
   const keywords = t('seo.keywords');
   const featureList = t('seo.featureList', { returnObjects: true });
 
-  const canonicalUrl = `${SITE_URL}${canonicalPath === '/' ? '/' : canonicalPath}`;
+  const hrefFr = buildLangHref(canonicalPath, 'fr');
+  const hrefEn = buildLangHref(canonicalPath, 'en');
+  const canonicalUrl = isEn ? hrefEn : hrefFr;
 
   const jsonLd = {
     '@context': 'https://schema.org',
     '@type': 'WebApplication',
     name: 'WaterPulse',
-    alternateName: 'Calculateur eau de pluie',
+    alternateName: isEn
+      ? 'Free Rainwater Harvesting Calculator'
+      : 'Calculateur eau de pluie',
     applicationCategory: 'UtilitiesApplication',
     operatingSystem: 'Any',
     url: SITE_URL,
@@ -58,8 +62,10 @@ export default function SEO({
       <meta name="robots" content="index, follow" />
       <link rel="canonical" href={canonicalUrl} />
 
-      <link rel="alternate" hrefLang="fr" href={canonicalUrl} />
-      <link rel="alternate" hrefLang="x-default" href={canonicalUrl} />
+      {/* Toujours déclarer FR + EN + x-default (URLs distinctes) */}
+      <link rel="alternate" hrefLang="fr" href={hrefFr} />
+      <link rel="alternate" hrefLang="en" href={hrefEn} />
+      <link rel="alternate" hrefLang="x-default" href={hrefFr} />
 
       <meta property="og:type" content={ogType} />
       <meta property="og:site_name" content="WaterPulse" />
