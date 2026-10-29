@@ -11,14 +11,22 @@ import fr from './locales/fr.json';
 import en from './locales/en.json';
 import { readLangFromSearch } from './utils/langUrl';
 
+const isBrowser = typeof window !== 'undefined';
+
+// Le détecteur navigateur (localStorage, navigator) n'existe pas au prerender.
+if (isBrowser) {
+  i18n.use(LanguageDetector);
+}
+
 i18n
-  .use(LanguageDetector)
   .use(initReactI18next)
   .init({
     resources: {
       fr: { translation: fr },
       en: { translation: en },
     },
+    // Prerender : français figé. Navigateur : détection inchangée.
+    lng: isBrowser ? undefined : 'fr',
     fallbackLng: 'fr',
     supportedLngs: ['fr', 'en'],
     nonExplicitSupportedLngs: true,
@@ -35,7 +43,7 @@ i18n
   });
 
 // Alignement immédiat si l'URL impose déjà une langue
-const urlLang = typeof window !== 'undefined' ? readLangFromSearch() : null;
+const urlLang = isBrowser ? readLangFromSearch() : null;
 if (urlLang && i18n.language?.slice(0, 2) !== urlLang) {
   i18n.changeLanguage(urlLang);
 }

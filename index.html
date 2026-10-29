@@ -3,7 +3,30 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <!-- Fallback SEO (avant hydration React / Helmet) — langue principale FR -->
+    <!-- Masque le HTML français prerendu si l'utilisateur est déjà en anglais (?lang=en ou localStorage waterpulse_lang). -->
+    <style>
+      html[data-ssr-lang-mismatch] #root {
+        visibility: hidden;
+      }
+    </style>
+    <script>
+      (function () {
+        var lang = '';
+        try {
+          var query = new URLSearchParams(location.search).get('lang') || '';
+          lang = query.toLowerCase().slice(0, 2);
+          if (!lang) {
+            var stored = localStorage.getItem('waterpulse_lang') || '';
+            lang = stored.toLowerCase().slice(0, 2);
+          }
+        } catch (e) {}
+        if (lang === 'en') {
+          document.documentElement.setAttribute('data-ssr-lang-mismatch', '');
+        }
+      })();
+    </script>
+    <!--prerender-head-->
+    <!-- Fallback SEO (dev, avant le prerender de production) — langue principale FR -->
     <meta
       name="description"
       content="Calculateur gratuit de récupérateur d'eau de pluie : estimez l'eau collectable sur votre toiture, la taille de cuve, l'autonomie en eau et vos économies pour jardin, potager ou maison autonome."
@@ -55,6 +78,7 @@
       name="twitter:image:alt"
       content="Calculateur Eau de Pluie Gratuit | WaterPulse"
     />
+    <!--/prerender-head-->
 
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
