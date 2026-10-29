@@ -24,10 +24,15 @@ const routes = [
       fr.hero.subtitle,
       fr.homeSeo.intro.title,
       fr.homeSeo.intro.body,
+      fr.homeSeo.sizing.title,
+      fr.homeSeo.sizing.sizes[0].range,
       fr.homeSeo.faq.title,
       fr.homeSeo.faq.items[0].question,
       fr.homeSeo.faq.items[0].answer,
+      fr.seo.title,
+      'France, Suisse, Luxembourg',
     ],
+    syncFaq: true,
     jsonLdTypes: ['WebApplication', 'FAQPage'],
     canonical: 'https://waterpulse.maketru.com/',
   },
@@ -118,19 +123,20 @@ function rootText(html) {
   return decodeEntities(source.replace(/<[^>]+>/g, ' ').replace(/\s+/g, ' ').trim());
 }
 
-function jsonLdTypes(html) {
-  const types = [];
+function jsonLdDocuments(html) {
+  const docs = [];
   const re = /<script\b[^>]*type="application\/ld\+json"[^>]*>([\s\S]*?)<\/script>/gi;
   let match = re.exec(html);
   while (match) {
     const data = JSON.parse(match[1]);
-    const list = Array.isArray(data) ? data : [data];
-    for (const item of list) {
-      if (item && item['@type']) types.push(item['@type']);
-    }
+    docs.push(...(Array.isArray(data) ? data : [data]));
     match = re.exec(html);
   }
-  return types;
+  return docs;
+}
+
+function jsonLdTypes(html) {
+  return jsonLdDocuments(html).map((item) => item?.['@type']).filter(Boolean);
 }
 
 function assertPage(route, html) {
@@ -180,6 +186,41 @@ function assertPage(route, html) {
       problems.push(`JSON-LD missing @type ${type} (found ${types.join(', ') || 'none'})`);
     }
   }
+  if (/<link\b[^>]*rel="alternate"[^>]*(?:hreflang|hrefLang)="en"/i.test(html)) {
+    problems.push('English hreflang is still declared');
+  }
+  if (!/<(?:link\b[^>]*rel="alternate"[^>]*(?:hreflang|hrefLang)="fr"|link\b[^>]*(?:hreflang|hrefLang)="fr"[^>]*rel="alternate")/i.test(html)) {
+    problems.push('missing fr hreflang');
+  }
+  if (!/(?:hreflang|hrefLang)="x-default"/i.test(html)) {
+    problems.push('missing x-default hreflang');
+  }
+  if (canonicalTag && canonicalTag[0].includes('lang=')) {
+    problems.push('canonical still carries a lang query');
+  }
+  if (!html.includes('property="og:title"') && !html.includes("property='og:title'")) {
+    problems.push('missing og:title');
+  }
+  if (!html.includes('name="twitter:title"') && !html.includes("name='twitter:title'")) {
+    problems.push('missing twitter:title');
+  }
+  if (!html.includes('name="twitter:description"') && !html.includes('property="og:description"')) {
+    problems.push('missing social description');
+  }
+  if (route.syncFaq) {
+    const faq = jsonLdDocuments(html).find((item) => item['@type'] === 'FAQPage');
+    const expected = fr.homeSeo.faq.items;
+    const actual = faq?.mainEntity ?? [];
+    if (actual.length !== expected.length) {
+      problems.push(`FAQPage has ${actual.length} questions, locale has ${expected.length}`);
+    } else {
+      expected.forEach((item, index) => {
+        if (actual[index]?.name !== item.question || actual[index]?.acceptedAnswer?.text !== item.answer) {
+          problems.push(`FAQPage item ${index + 1} is out of sync`);
+        }
+      });
+    }
+  }
 
   if (problems.length) {
     throw new Error(`${route.url} prerender check failed:\n- ${problems.join('\n- ')}`);
@@ -205,3 +246,38 @@ for (const route of routes) {
     `prerender ${route.url} -> ${route.file} (${stats.words} words, JSON-LD: ${stats.types.join(', ')})`
   );
 }
+
+const sitemap = fs.readFileSync(path.join(distDir, 'sitemap.xml'), 'utf8');
+const indexableUrls = [
+  'https://waterpulse.maketru.com/',
+  'https://waterpulse.maketru.com/about',
+  'https://waterpulse.maketru.com/privacy',
+  'https://waterpulse.maketru.com/terms',
+];
+for (const loc of indexableUrls) {
+  if (!sitemap.includes(`<loc>${loc}</loc>`)) {
+    throw new Error(`sitemap missing ${loc}`);
+  }
+}
+if (/lang=en|\.html</.test(sitemap)) {
+  throw new Error('sitemap lists a query-string or .html URL');
+}
+
+const notFound = fs.readFileSync(path.join(distDir, '404.html'), 'utf8');
+if (!/noindex/i.test(notFound)) {
+  throw new Error('dist/404.html is missing noindex');
+}
+
+const hosting = JSON.parse(fs.readFileSync(path.join(root, 'firebase.json'), 'utf8'));
+const rewrites = hosting.hosting?.rewrites ?? [];
+if (rewrites.some((rule) => rule.source === '**')) {
+  throw new Error('firebase.json still rewrites every URL to index.html, so 404.html never runs');
+}
+
+const png = fs.readFileSync(path.join(distDir, 'og-image.png'));
+const pngWidth = png.readUInt32BE(16);
+const pngHeight = png.readUInt32BE(20);
+if (pngWidth !== 1200 || pngHeight !== 630) {
+  throw new Error(`og-image.png is ${pngWidth}x${pngHeight}, expected 1200x630`);
+}
+console.log('sitemap, 404.html and og-image.png checks ok');
