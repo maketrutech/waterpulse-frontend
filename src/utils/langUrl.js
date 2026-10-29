@@ -25,8 +25,10 @@ export function buildLangHref(path = '/', lang = 'fr') {
  * Lit la langue depuis l'URL (?lang=en).
  * @returns {'fr'|'en'|null}
  */
-export function readLangFromSearch(search = window.location.search) {
-  const params = new URLSearchParams(search);
+export function readLangFromSearch(search) {
+  const source =
+    search ?? (typeof window !== 'undefined' ? window.location.search : '');
+  const params = new URLSearchParams(source);
   const raw = (params.get('lang') || '').toLowerCase().slice(0, 2);
   if (raw === 'en') return 'en';
   if (raw === 'fr') return 'fr';

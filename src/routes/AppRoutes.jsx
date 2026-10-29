@@ -6,11 +6,11 @@ import PrivacyPolicy from '../pages/PrivacyPolicy';
 import TermsOfService from '../pages/TermsOfService';
 
 /**
- * Routes de l'application : accueil + pages légales.
+ * Arbre de routes partagé par le routeur navigateur et le prerender.
  */
-export default function AppRoutes() {
+export function AppContent() {
   return (
-    <BrowserRouter>
+    <>
       <LanguageUrlSync />
       <Routes>
         <Route path="/" element={<HomePage />} />
@@ -18,6 +18,17 @@ export default function AppRoutes() {
         <Route path="/terms" element={<TermsOfService />} />
         <Route path="/about" element={<About />} />
       </Routes>
+    </>
+  );
+}
+
+/**
+ * Routes de l'application : accueil + pages légales.
+ */
+export default function AppRoutes() {
+  return (
+    <BrowserRouter>
+      <AppContent />
     </BrowserRouter>
   );
 }

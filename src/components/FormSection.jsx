@@ -10,13 +10,6 @@ import {
   MapPin,
   Users,
 } from 'lucide-react';
-import { MapContainer, Marker, TileLayer, useMap, useMapEvents } from 'react-leaflet';
-import L from 'leaflet';
-import 'leaflet/dist/leaflet.css';
-
-import markerIcon2x from 'leaflet/dist/images/marker-icon-2x.png';
-import markerIcon from 'leaflet/dist/images/marker-icon.png';
-import markerShadow from 'leaflet/dist/images/marker-shadow.png';
 import {
   DEFAULT_COUNTRY,
   findCity,
@@ -26,26 +19,6 @@ import {
 } from '../data/locations';
 import { ROOF_COEFFICIENTS } from '../services/rainCalc';
 import SearchableSelect from './SearchableSelect';
-
-delete L.Icon.Default.prototype._getIconUrl;
-L.Icon.Default.mergeOptions({
-  iconRetinaUrl: markerIcon2x,
-  iconUrl: markerIcon,
-  shadowUrl: markerShadow,
-});
-
-function createMarkerIcon(alt) {
-  return new L.Icon({
-    iconUrl: markerIcon,
-    iconRetinaUrl: markerIcon2x,
-    shadowUrl: markerShadow,
-    iconSize: [25, 41],
-    iconAnchor: [12, 41],
-    popupAnchor: [1, -34],
-    shadowSize: [41, 41],
-    alt,
-  });
-}
 
 const DEFAULT_CITY = getDefaultCity(DEFAULT_COUNTRY);
 const CITY_ZOOM = 11;
@@ -57,79 +30,17 @@ const ROOF_TYPES = [
   { id: 'metal', coef: ROOF_COEFFICIENTS.metal },
 ];
 
-function RecenterMap({ lat, lon, zoom = CITY_ZOOM }) {
-  const map = useMap();
-
-  useEffect(() => {
-    if (!Number.isFinite(lat) || !Number.isFinite(lon)) return;
-    const targetZoom = Number.isFinite(zoom) ? zoom : CITY_ZOOM;
-    map.flyTo([lat, lon], targetZoom, { duration: 0.7 });
-  }, [lat, lon, zoom, map]);
-
-  return null;
-}
-
-function MapClickHandler({ onPositionChange }) {
-  useMapEvents({
-    click(event) {
-      const { lat, lng } = event.latlng;
-      onPositionChange(lat, lng);
-    },
-  });
-  return null;
-}
-
-function LocationMap({ lat, lon, zoom, onPositionChange }) {
-  const { t } = useTranslation();
-  const numericLat = Number(lat);
-  const numericLon = Number(lon);
-  const position = [
-    Number.isFinite(numericLat) ? numericLat : DEFAULT_CITY.lat,
-    Number.isFinite(numericLon) ? numericLon : DEFAULT_CITY.lon,
-  ];
-  const markerIconInstance = createMarkerIcon(t('form.markerAlt'));
-
-  return (
-    <MapContainer
-      center={position}
-      zoom={Number.isFinite(zoom) ? zoom : CITY_ZOOM}
-      scrollWheelZoom
-      className="z-0 h-full w-full"
-      aria-label={t('form.mapLabel')}
-    >
-      <TileLayer
-        attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a>'
-        url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
-      />
-      <RecenterMap lat={position[0]} lon={position[1]} zoom={zoom} />
-      <MapClickHandler onPositionChange={onPositionChange} />
-      <Marker
-        position={position}
-        icon={markerIconInstance}
-        alt={t('form.markerAlt')}
-        title={t('form.markerAlt')}
-        draggable
-        eventHandlers={{
-          dragend: (event) => {
-            const { lat: nextLat, lng: nextLng } = event.target.getLatLng();
-            onPositionChange(nextLat, nextLng);
-          },
-        }}
-      />
-    </MapContainer>
-  );
-}
-
 function DeferredLocationMap({ lat, lon, zoom, onPositionChange }) {
   const { t } = useTranslation();
   const containerRef = useRef(null);
   const [shouldLoad, setShouldLoad] = useState(false);
+  const [LocationMap, setLocationMap] = useState(null);
 
   useEffect(() => {
     const node = containerRef.current;
     if (!node || shouldLoad) return undefined;
 
-    if (typeof IntersectionObserver === 'undefined') {
+    if (typeof window === 'undefined' || typeof IntersectionObserver === 'undefined') {
       setShouldLoad(true);
       return undefined;
     }
@@ -148,16 +59,35 @@ function DeferredLocationMap({ lat, lon, zoom, onPositionChange }) {
     return () => observer.disconnect();
   }, [shouldLoad]);
 
+  useEffect(() => {
+    if (!shouldLoad || LocationMap) return undefined;
+    let cancelled = false;
+
+    import('./LocationMap')
+      .then((mod) => {
+        if (!cancelled) setLocationMap(() => mod.default);
+      })
+      .catch(() => {
+        // Chunk carte indisponible : on garde le placeholder.
+      });
+
+    return () => {
+      cancelled = true;
+    };
+  }, [shouldLoad, LocationMap]);
+
+  const mapReady = Boolean(shouldLoad && LocationMap);
+
   return (
     <div
       ref={containerRef}
       className="mt-4 overflow-hidden rounded-2xl border border-sky-mid/20 shadow-sm"
       role="region"
       aria-label={t('form.mapLabel')}
-      aria-busy={!shouldLoad}
+      aria-busy={!mapReady}
     >
       <div className="relative h-64 w-full bg-mist sm:h-80">
-        {shouldLoad ? (
+        {mapReady ? (
           <LocationMap
             lat={lat}
             lon={lon}
@@ -266,7 +196,7 @@ export default function FormSection({ onSubmit, loading }) {
 
   const handleUseMyLocation = () => {
     setGeoMessage(null);
-    if (!navigator.geolocation) {
+    if (typeof navigator === 'undefined' || !navigator.geolocation) {
       setGeoMessage({ type: 'error', key: 'form.geo.unsupported' });
       return;
     }
