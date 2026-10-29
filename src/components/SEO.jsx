@@ -3,9 +3,11 @@ import { useTranslation } from 'react-i18next';
 import { SITE_URL, buildLangHref } from '../utils/langUrl';
 
 const DEFAULT_OG_IMAGE = `${SITE_URL}/og-image.png`;
+const OG_IMAGE_ALT = "WaterPulse — Calculateur gratuit de récupération d'eau de pluie";
 
 /**
- * Métadonnées SEO dynamiques FR / EN + hreflang distincts.
+ * Métadonnées SEO. L'URL indexable est toujours la version française :
+ * ?lang=en n'est pas une URL distincte sur l'hébergement statique.
  */
 export default function SEO({
   title: titleProp,
@@ -23,17 +25,15 @@ export default function SEO({
   const keywords = t('seo.keywords');
   const featureList = t('seo.featureList', { returnObjects: true });
 
-  const hrefFr = buildLangHref(canonicalPath, 'fr');
-  const hrefEn = buildLangHref(canonicalPath, 'en');
-  const canonicalUrl = isEn ? hrefEn : hrefFr;
+  const canonicalUrl = buildLangHref(canonicalPath, 'fr');
 
   const jsonLd = {
     '@context': 'https://schema.org',
     '@type': 'WebApplication',
     name: 'WaterPulse',
     alternateName: isEn
-      ? 'Free Rainwater Harvesting Calculator'
-      : 'Calculateur eau de pluie',
+      ? 'Free rainwater tank calculator'
+      : "Calculateur de cuve d'eau de pluie",
     applicationCategory: 'UtilitiesApplication',
     operatingSystem: 'Any',
     url: SITE_URL,
@@ -62,31 +62,25 @@ export default function SEO({
       <meta name="robots" content="index, follow" />
       <link rel="canonical" href={canonicalUrl} />
 
-      {/* Toujours déclarer FR + EN + x-default (URLs distinctes) */}
-      <link rel="alternate" hrefLang="fr" href={hrefFr} />
-      <link rel="alternate" hrefLang="en" href={hrefEn} />
-      <link rel="alternate" hrefLang="x-default" href={hrefFr} />
+      <link rel="alternate" hrefLang="fr" href={canonicalUrl} />
+      <link rel="alternate" hrefLang="x-default" href={canonicalUrl} />
 
       <meta property="og:type" content={ogType} />
       <meta property="og:site_name" content="WaterPulse" />
       <meta property="og:locale" content={isEn ? 'en_US' : 'fr_FR'} />
-      <meta
-        property="og:locale:alternate"
-        content={isEn ? 'fr_FR' : 'en_US'}
-      />
       <meta property="og:url" content={canonicalUrl} />
       <meta property="og:title" content={title} />
       <meta property="og:description" content={description} />
       <meta property="og:image" content={ogImage} />
       <meta property="og:image:width" content="1200" />
       <meta property="og:image:height" content="630" />
-      <meta property="og:image:alt" content={title} />
+      <meta property="og:image:alt" content={OG_IMAGE_ALT} />
 
       <meta name="twitter:card" content="summary_large_image" />
       <meta name="twitter:title" content={title} />
       <meta name="twitter:description" content={description} />
       <meta name="twitter:image" content={ogImage} />
-      <meta name="twitter:image:alt" content={title} />
+      <meta name="twitter:image:alt" content={OG_IMAGE_ALT} />
 
       <script type="application/ld+json">{JSON.stringify(jsonLd)}</script>
     </Helmet>

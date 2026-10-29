@@ -9,9 +9,13 @@ export default function HomeSeoSections() {
   const { t, i18n } = useTranslation();
 
   const steps = t('homeSeo.how.steps', { returnObjects: true });
+  const factors = t('homeSeo.sizing.factors', { returnObjects: true });
+  const sizes = t('homeSeo.sizing.sizes', { returnObjects: true });
   const faqItems = t('homeSeo.faq.items', { returnObjects: true });
 
   const safeSteps = Array.isArray(steps) ? steps : [];
+  const safeFactors = Array.isArray(factors) ? factors : [];
+  const safeSizes = Array.isArray(sizes) ? sizes : [];
   const safeFaq = Array.isArray(faqItems) ? faqItems : [];
 
   const faqJsonLd = {
@@ -82,6 +86,53 @@ export default function HomeSeoSections() {
             </li>
           ))}
         </ol>
+      </section>
+
+      <section
+        id="taille-cuve"
+        aria-labelledby="home-seo-sizing-title"
+        className="mx-auto mt-8 max-w-4xl px-4 sm:px-6"
+      >
+        <h2
+          id="home-seo-sizing-title"
+          className="font-display text-2xl font-bold text-sky-deep sm:text-3xl"
+        >
+          {t('homeSeo.sizing.title')}
+        </h2>
+        <p className="mt-2 max-w-3xl text-sm leading-relaxed text-sky-deep/75 sm:text-base">
+          {t('homeSeo.sizing.lead')}
+        </p>
+
+        <div className="mt-5 space-y-4">
+          {safeFactors.map((factor) => (
+            <div key={factor.title}>
+              <h3 className="font-display text-lg font-bold text-sky-deep">{factor.title}</h3>
+              <p className="mt-1.5 text-sm leading-relaxed text-sky-deep/70 sm:text-base">
+                {factor.body}
+              </p>
+            </div>
+          ))}
+        </div>
+
+        <h3 className="mt-6 font-display text-lg font-bold text-sky-deep">
+          {t('homeSeo.sizing.sizesTitle')}
+        </h3>
+        <ul className="mt-3 space-y-3">
+          {safeSizes.map((size) => (
+            <li key={size.range} className="text-sm leading-relaxed text-sky-deep/75 sm:text-base">
+              <span className="font-semibold text-sky-deep">{size.range}.</span> {size.body}
+            </li>
+          ))}
+        </ul>
+        <p className="mt-4 max-w-3xl text-sm leading-relaxed text-sky-deep/75 sm:text-base">
+          {t('homeSeo.sizing.note')}
+        </p>
+        <a
+          href="#calculateur"
+          className="mt-5 inline-flex min-h-12 items-center rounded-2xl bg-sky-mid px-5 py-3 font-display text-sm font-bold text-white transition hover:bg-sky-deep focus:outline-none focus-visible:ring-2 focus-visible:ring-sky-mid"
+        >
+          {t('homeSeo.sizing.cta')}
+        </a>
       </section>
 
       <section

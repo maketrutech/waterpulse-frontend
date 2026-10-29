@@ -1,13 +1,13 @@
 {
   "seo": {
-    "title": "Free Rainwater Harvesting Calculator | Tank Sizing & Savings | WaterPulse",
-    "description": "Free rainwater harvester calculator: estimate roof runoff, tank size, water autonomy and savings for garden, vegetable patch or an off-grid home.",
-    "keywords": "rainwater harvester, rainwater calculator, rainwater harvesting, potable rainwater, water autonomy, save water, roof area, automatic irrigation, vegetable garden, garden, rainwater tank, DIY guide, off-grid home, self-sufficiency, living off-grid, drinking water, drought, resilience, tank sizing, water savings",
+    "title": "Rainwater tank sizing | Free calculator",
+    "description": "Estimate a rainwater tank from your roof, local rainfall (France, Switzerland, Luxembourg) and how you use the water. From a water butt to a cistern.",
+    "keywords": "rainwater tank, rainwater harvesting, water butt, rainwater cistern, tank sizing, rainwater calculator, France, Switzerland, Luxembourg",
     "featureList": [
-      "Free rainwater harvester calculator",
-      "Tank sizing from roof area and location",
-      "Water autonomy for garden, patch and savings",
-      "Drought resilience planning aid"
+      "Free rainwater tank calculation",
+      "Sizing from roof area and local rainfall",
+      "Guidance from a water butt to a cistern",
+      "France, Switzerland and Luxembourg"
     ]
   },
   "nav": {
@@ -16,36 +16,75 @@
     "switchTo": "Switch language"
   },
   "hero": {
-    "title": "Free rainwater calculator",
-    "subtitle": "Size your tank and water autonomy from your roof: garden, vegetable patch, savings and drought resilience.",
+    "title": "Rainwater tank calculator",
+    "subtitle": "Free sizing from your roof and local rainfall, in France, Switzerland and Luxembourg.",
     "cta": "Start the calculation"
   },
   "homeSeo": {
     "intro": {
-      "title": "Rainwater harvester: tank, autonomy and savings",
-      "body": "WaterPulse is a free calculator to size a rainwater harvester. Enter your location, roof area and uses (garden, vegetable patch, toilet, laundry) to estimate collectable water, save water and improve water autonomy — useful for an off-grid home, self-sufficiency or drought resilience. The recommended tank volume covers about 21 days of reserve."
+      "title": "Rainwater harvesting: from a water butt to a cistern",
+      "body": "WaterPulse estimates how much water a roof can collect and which tank fits. Enter a place in France, Switzerland, Luxembourg or elsewhere, the roof area and the uses (garden, toilet, laundry). The calculation uses Open-Meteo rainfall and suggests a volume close to a 21-day reserve, from a small water butt to a cistern of several thousand litres."
     },
     "how": {
-      "title": "How to size a rainwater tank?",
-      "lead": "In a few steps, get a clear estimate for water autonomy, irrigation or a DIY home project.",
+      "title": "How do you size a rainwater tank?",
+      "lead": "A rainwater tank calculation needs three inputs: the roof, local rainfall, and what you will use the water for. The volume is then compared with common sizes, from 300 L to 10,000 L.",
       "steps": [
         {
           "title": "1. Locate your roof",
-          "body": "Pick a country and city, or use the map and GPS. WaterPulse fetches average yearly rainfall (mm) via Open-Meteo to estimate your roof potential."
+          "body": "Pick a country and a city, or drop a point on the map. WaterPulse loads average rainfall (mm/year) from Open-Meteo for that exact place, not a national average."
         },
         {
-          "title": "2. Describe roof and uses",
-          "body": "Enter roof area in m², roof type (tiles, flat, metal), household size and uses: garden, vegetable patch / irrigation, toilet, laundry — to save more water day to day."
+          "title": "2. Describe the roof and uses",
+          "body": "Enter the area in m² and the roof type (tiles, flat, metal). Tick garden, toilets and laundry: they do not draw the same amount of water, and not every use is allowed everywhere."
         },
         {
-          "title": "3. Review tank and autonomy",
-          "body": "The calculator shows collectable water, needs, recommended tank volume and an indicative water autonomy percentage toward greater self-sufficiency."
+          "title": "3. Read the tank volume",
+          "body": "The calculator shows collectable water, demand and a tank rounded to a common size, with a rough autonomy figure. How to choose between a water butt and a cistern is just below."
         }
       ]
     },
+    "sizing": {
+      "title": "What size rainwater tank should you choose?",
+      "lead": "There is no standard tank. The right volume is one the roof can fill and that you use before the next real spell of rain. A water butt of a few hundred litres waters a garden. A cistern of several thousand litres starts to cover toilets.",
+      "factors": [
+        {
+          "title": "Roof area",
+          "body": "Use the roof footprint in m². One millimetre of rain on 1 m² is 1 litre, but not all of it reaches the tank: tiles, a flat roof and metal do not run off the same way, and the calculation keeps about 10% back for filtration."
+        },
+        {
+          "title": "Local rainfall",
+          "body": "The same roof in Brest and in Sion will not fill the same tank. Across France, Switzerland and Luxembourg, totals also change a lot from one town to the next. The calculator uses the Open-Meteo series for the point you pick."
+        },
+        {
+          "title": "How you use the water",
+          "body": "The suggested volume covers about 21 days, based on whichever is smaller: water the roof can collect over the year, or your demand. There is no point storing more than the roof supplies, or much more than you use between wet periods."
+        }
+      ],
+      "sizesTitle": "Benchmarks, from 300 L to 10,000 L",
+      "sizes": [
+        {
+          "range": "300 to 1,000 L",
+          "body": "Above-ground water butt for a shed or a small terrace. Enough for occasional watering, too small for toilets all year."
+        },
+        {
+          "range": "1,000 to 3,000 L",
+          "body": "A house with a garden, or toilets only. Often the first step beyond a butt on a downpipe."
+        },
+        {
+          "range": "3,000 to 5,000 L",
+          "body": "A household combining toilets and watering, sometimes laundry, with a roof of about 50 to 100 m² in a moderately wet area."
+        },
+        {
+          "range": "5,000 to 10,000 L",
+          "body": "A large roof, or a wish to last longer without rain. At this size people usually move to a cistern, sometimes buried."
+        }
+      ],
+      "note": "Two 80 m² roofs do not need the same tank if one is in Luxembourg and the other in Valais. These ranges place the result; they do not replace it.",
+      "cta": "Calculate my tank size"
+    },
     "faq": {
       "title": "Frequently asked questions",
-      "lead": "Short answers to get the most from this rainwater harvester calculator.",
+      "lead": "Rainfall, tank volume and rules of use in France, Switzerland and Luxembourg.",
       "items": [
         {
           "question": "How is collectable water calculated?",
@@ -53,23 +92,35 @@
         },
         {
           "question": "How is tank volume chosen?",
-          "answer": "The recommended tank volume is about 21 days of reserve based on the minimum of collectable water and yearly needs, then rounded to a common size — useful for a DIY guide or installer quote."
+          "answer": "The recommended volume is about 21 days of reserve, based on the minimum of collectable water and yearly demand, then rounded to a common size between 300 L and 10,000 L."
         },
         {
-          "question": "Is rainwater potable / drinking water?",
-          "answer": "Collected rainwater is generally not potable without proper treatment. WaterPulse mainly sizes non-potable uses (garden, vegetable patch, automatic irrigation, toilet, laundry). For drinking water or an off-grid home, have the system validated by a professional."
+          "question": "How much rain falls in France, Switzerland and Luxembourg?",
+          "answer": "The gap is often wider inside one country than between these three. In France, the Paris basin is often around 600 to 700 mm a year, the Atlantic coast and the mountains are wetter, and the Mediterranean rim is drier. In Switzerland, the Plateau is often near 1,000 mm, the Alps wetter, and some valleys such as parts of Valais much drier. Luxembourg is more like 800 to 1,000 mm, a little higher in the Oesling than in the Gutland. These are orders of magnitude: for a tank, rainfall at the exact point matters more than the country average. The calculator asks Open-Meteo for the place you choose."
         },
         {
-          "question": "Does this help with drought?",
-          "answer": "Indicatively yes: storing rainwater improves resilience and water autonomy in dry periods, without replacing a full local study."
+          "question": "What can rainwater be used for, and which rules apply?",
+          "answer": "Rainwater collected from a roof is not drinking water. In France, the order of 21 August 2008 allows outdoor use (watering, washing) and, indoors, toilets and floor washing, provided the roof is not asbestos-cement or lead. Laundry is only foreseen on an experimental basis, with suitable treatment: it is not a general right. This water must not be used for drinking, cooking, dishwashing or washing yourself, and its pipes must stay separate from drinking water, labelled “non-potable water”. If the system is connected and water used indoors goes to the public sewer, you need to declare it at the town hall (service-public.fr, page “Récupération de l'eau de pluie”). In Switzerland, watering and often toilets are accepted, but building and infiltration rules depend on the canton and the municipality; drinking water is a different law. In Luxembourg, garden use is common; use inside the house must keep rainwater separate from drinking water and follow municipal rules. The local water service is the reference. WaterPulse estimates a volume; it does not approve an installation."
         },
         {
-          "question": "Where does rainfall data come from?",
-          "answer": "Averages are derived from the Open-Meteo Archive API (multi-year history) for your latitude and longitude."
+          "question": "Water butt, tank or cistern: which one?",
+          "answer": "A water butt is usually an above-ground tank, from a few hundred litres to about 1,000 L, fed by a downpipe and meant mainly for the garden. A cistern is several thousand litres, often up to 10,000 L, sometimes buried, when toilets or a longer reserve come into play. The right choice is the volume the roof can fill and that you use before the water sits for too long."
         },
         {
-          "question": "Do results replace a professional study?",
-          "answer": "No. WaterPulse provides an estimate to prepare a self-sufficiency or harvester project. A site survey remains necessary for a final design."
+          "question": "Is the calculation the same in France, Switzerland and Luxembourg?",
+          "answer": "Yes for the formula: roof area, local rainfall, roof type and uses. What changes is the rainfall total at that place and the rules of use, not a constant per country. A roof in Lille, Geneva or Luxembourg City is calculated the same way once the point is on the map."
+        },
+        {
+          "question": "Is rainwater safe to drink?",
+          "answer": "Not as collected. Without treatment designed for drinking water, it stays non-potable. WaterPulse sizes uses such as the garden or toilets. A drinking-water project has to be checked by a professional and against local rules."
+        },
+        {
+          "question": "Where does the rainfall data come from?",
+          "answer": "Averages come from the Open-Meteo Archive API (several years of history) for the latitude and longitude you choose."
+        },
+        {
+          "question": "Do the results replace a professional study?",
+          "answer": "No. This is an estimate to prepare a water butt or a cistern. A site survey is still needed for a final design, especially if the tank is buried or connected to the house."
         }
       ]
     }

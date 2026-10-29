@@ -34,7 +34,7 @@ i18n
       escapeValue: false,
     },
     detection: {
-      // querystring (?lang=en) en premier pour Googlebot / partages SEO
+      // ?lang= choisit l'affichage. Ce n'est pas une URL indexable distincte.
       order: ['querystring', 'localStorage', 'htmlTag', 'navigator'],
       caches: ['localStorage'],
       lookupQuerystring: 'lang',
