@@ -1,7 +1,7 @@
 import { useTranslation } from 'react-i18next';
 import LegalLayout from '../components/LegalLayout';
 
-const CONTACT_EMAIL = 'contact@maketru.com';
+const CONTACT_EMAIL = 'maketru.tech@gmail.com';
 
 /**
  * À propos de WaterPulse + formulaire de contact.
