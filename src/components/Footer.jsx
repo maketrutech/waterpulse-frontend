@@ -10,6 +10,13 @@ export default function Footer() {
     { to: '/terms', label: t('footer.links.terms') },
   ];
 
+  const otherTools = [
+    { href: 'https://solarpulse.maketru.com/', label: t('footer.otherTools.solar') },
+    { href: 'https://docslice.maketru.com/', label: t('footer.otherTools.docslice') },
+    { href: 'https://chronopulse.maketru.com/', label: t('footer.otherTools.chrono') },
+    { href: 'https://facturepulse.maketru.com/', label: t('footer.otherTools.facture') },
+  ];
+
   return (
     <footer className="border-t border-sky-mid/10 bg-sky-deep px-4 py-6 text-center text-sm text-on-dark-muted sm:px-6">
       <p className="font-display text-lg font-bold text-white">
@@ -37,6 +44,27 @@ export default function Footer() {
               {link.label}
             </Link>
           </span>
+        ))}
+      </nav>
+
+      <nav
+        className="mx-auto mt-4 flex max-w-3xl flex-wrap items-center justify-center gap-x-4 gap-y-1 text-sm"
+        aria-labelledby="footer-other-tools"
+      >
+        <p
+          id="footer-other-tools"
+          className="w-full text-xs font-semibold uppercase tracking-wide text-white/70"
+        >
+          {t('footer.otherToolsTitle')}
+        </p>
+        {otherTools.map((tool) => (
+          <a
+            key={tool.href}
+            href={tool.href}
+            className="inline-flex min-h-12 items-center px-2 font-medium text-aqua transition hover:text-aqua-glow hover:underline underline-offset-2 focus:outline-none focus-visible:ring-2 focus-visible:ring-aqua"
+          >
+            {tool.label}
+          </a>
         ))}
       </nav>
     </footer>

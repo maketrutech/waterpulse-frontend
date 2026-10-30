@@ -126,8 +126,15 @@
     }
   },
   "footer": {
-    "credit": "Rainfall data via the Open-Meteo API. Indicative calculator — non-binding.",
+    "credit": "Rainfall data via the Open-Meteo API. Indicative calculator — non-binding. A Maketru tool.",
     "legalNav": "Legal information",
+    "otherToolsTitle": "Other Maketru tools",
+    "otherTools": {
+      "solar": "Free solar simulator",
+      "docslice": "Merge PDFs",
+      "chrono": "Online timer and stopwatch",
+      "facture": "E-invoicing platform comparison"
+    },
     "links": {
       "about": "About",
       "privacy": "Privacy",

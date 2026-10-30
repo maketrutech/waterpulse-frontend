@@ -126,8 +126,15 @@
     }
   },
   "footer": {
-    "credit": "Précipitations fournies via l'API Open-Meteo. Calculateur indicatif — non contractuel.",
+    "credit": "Précipitations fournies via l'API Open-Meteo. Calculateur indicatif — non contractuel. Un outil Maketru.",
     "legalNav": "Informations légales",
+    "otherToolsTitle": "Autres outils Maketru",
+    "otherTools": {
+      "solar": "Simulateur solaire gratuit",
+      "docslice": "Fusionner des PDF",
+      "chrono": "Minuteur et chronomètre en ligne",
+      "facture": "Comparateur facturation électronique"
+    },
     "links": {
       "about": "À propos",
       "privacy": "Confidentialité",
