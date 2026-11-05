@@ -1,12 +1,12 @@
 {
   "seo": {
-    "title": "Dimensionnement cuve eau de pluie | Calculateur gratuit",
-    "description": "Estimez la taille d'une cuve de récupération d'eau de pluie : toiture, pluie locale (France, Suisse, Luxembourg) et usages. Du récupérateur à la citerne.",
-    "keywords": "cuve récupération eau de pluie, récupération eau de pluie, récupérateur eau de pluie, citerne eau de pluie, calcul cuve eau de pluie, dimensionnement cuve eau de pluie, calculateur eau de pluie",
+    "title": "Récupérateur eau de pluie et cuve | Calcul gratuit",
+    "description": "Calculez un récupérateur ou une cuve d'eau de pluie selon la toiture et la pluie locale (France, Suisse, Luxembourg). Guide de récupération d'eau de pluie.",
+    "keywords": "récupérateur eau de pluie, cuve eau de pluie, récupération eau de pluie, calcul eau de pluie, citerne eau de pluie, dimensionnement cuve eau de pluie",
     "featureList": [
-      "Calcul gratuit de cuve d'eau de pluie",
+      "Calcul gratuit d'un récupérateur ou d'une cuve d'eau de pluie",
       "Dimensionnement selon la toiture et la pluie locale",
-      "Repères du récupérateur à la citerne",
+      "Repères du récupérateur hors sol à la cuve enterrée",
       "France, Suisse et Luxembourg"
     ]
   },
@@ -16,26 +16,33 @@
     "switchTo": "Changer de langue"
   },
   "hero": {
-    "title": "Calculateur de cuve d'eau de pluie",
-    "subtitle": "Dimensionnement gratuit selon votre toiture et la pluie locale, en France, en Suisse et au Luxembourg.",
+    "title": "Récupérateur et cuve d'eau de pluie",
+    "subtitle": "Calculateur gratuit de récupération d'eau de pluie, selon votre toiture et la pluie locale, en France, en Suisse et au Luxembourg.",
     "cta": "Lancer le calcul"
   },
   "homeSeo": {
+    "jumpLabel": "Dans cette page",
+    "jumps": [
+      { "href": "#calculateur", "label": "Calculateur" },
+      { "href": "#taille-cuve", "label": "Taille de cuve" },
+      { "href": "#consommation-eau", "label": "Eau par personne" },
+      { "href": "#faq", "label": "Questions" }
+    ],
     "intro": {
-      "title": "Récupération d'eau de pluie : du récupérateur à la citerne",
-      "body": "WaterPulse estime l'eau qu'une toiture peut recueillir et la cuve qui va avec. Indiquez un lieu en France, en Suisse, au Luxembourg ou ailleurs, la surface de toit et les usages (jardin, WC, lave-linge). Le calcul s'appuie sur les pluies Open-Meteo et propose un volume proche d'une réserve de 21 jours, d'un petit récupérateur jusqu'à une citerne de plusieurs milliers de litres."
+      "title": "Récupération d'eau de pluie : du récupérateur à la cuve",
+      "body": "WaterPulse estime l'eau qu'une toiture peut recueillir et la cuve d'eau de pluie qui va avec. Un récupérateur d'eau de pluie désigne cette collecte — gouttière, filtre, stockage — qu'il s'agisse d'un petit réservoir de jardin ou d'une cuve de plusieurs milliers de litres. Indiquez un lieu en France, en Suisse, au Luxembourg ou ailleurs, la surface de toit, la taille du foyer et les usages (jardin, WC, lave-linge). Le calcul s'appuie sur les pluies Open-Meteo et propose un volume proche d'une réserve de 21 jours. Le même formulaire couvre toute la gamme."
     },
     "how": {
-      "title": "Comment dimensionner une cuve d'eau de pluie ?",
-      "lead": "Le calcul d'une cuve d'eau de pluie tient en trois données : la toiture, la pluie de l'endroit, et ce que vous comptez en faire. Le volume se compare ensuite à des tailles courantes, de 300 L à 10 000 L.",
+      "title": "Comment calculer un récupérateur ou une cuve d'eau de pluie ?",
+      "lead": "Le calcul tient en trois données : la toiture, la pluie de l'endroit, et les usages que l'eau de pluie peut vraiment couvrir. Le volume se compare ensuite à des tailles courantes, de 300 L à 10 000 L.",
       "steps": [
         {
           "title": "1. Localisez votre toiture",
           "body": "Choisissez un pays et une ville, ou placez le point sur la carte. WaterPulse récupère les précipitations moyennes (mm/an) via Open-Meteo pour ce lieu précis, plutôt qu'une moyenne nationale."
         },
         {
-          "title": "2. Décrivez toiture et usages",
-          "body": "Saisissez la surface en m² et le type de toit (tuiles, plat, métal). Cochez le jardin, les WC et le lave-linge : ils ne tirent pas la même quantité d'eau, et tous ne sont pas autorisés partout."
+          "title": "2. Décrivez toiture, foyer et usages",
+          "body": "Saisissez la surface en m², le type de toit (tuiles, plat, métal) et le nombre de personnes. Cochez le jardin, les WC et le lave-linge : seuls ces postes entrent dans les besoins, et ils ne sont pas autorisés de la même façon."
         },
         {
           "title": "3. Lisez le volume de cuve",
@@ -44,8 +51,9 @@
       ]
     },
     "sizing": {
-      "title": "Quelle taille de cuve de récupération d'eau de pluie choisir ?",
-      "lead": "Il n'y a pas de cuve standard. Le bon volume est celui que le toit peut remplir et que vous utilisez avant la prochaine vraie pluie. Un récupérateur de quelques centaines de litres arrose un jardin. Une citerne de plusieurs milliers de litres commence à couvrir des WC.",
+      "title": "Quelle taille de récupérateur ou de cuve d'eau de pluie ?",
+      "lead": "Il n'y a pas de cuve standard. Le bon volume est celui que le toit peut remplir et que vous utilisez avant la prochaine vraie pluie. Un récupérateur de quelques centaines de litres arrose un jardin. Une cuve de plusieurs milliers de litres commence à couvrir des WC.",
+      "compare": "Le récupérateur d'eau de pluie est le plus souvent une cuve hors sol sous une gouttière. Service Public précise qu'il peut aussi être une cuve enterrée, en général de plus grande capacité, qu'il soit ou non raccordé à la maison. Ces repères aident à lire le résultat du calcul. Ils ne sont pas un prix : le coût dépend du modèle, de la pose et de la commune, et WaterPulse ne l'estime pas.",
       "factors": [
         {
           "title": "La surface de toiture",
@@ -82,10 +90,52 @@
       "note": "Deux toitures de 80 m² n'appellent pas la même cuve si l'une est à Luxembourg et l'autre en Valais. Ces fourchettes situent le résultat, elles ne le remplacent pas.",
       "cta": "Calculer la taille de ma cuve"
     },
+    "usage": {
+      "title": "Consommation d'eau par personne et taille de cuve",
+      "lead": "La consommation d'eau par personne n'est utile ici que pour les usages que l'eau de pluie peut couvrir. Elle ne dit pas quelle cuve acheter.",
+      "points": [
+        {
+          "title": "L'eau du robinet, en France",
+          "body": "En 2022, la consommation domestique moyenne était d'environ 150 litres par habitant et par jour, soit 54,6 m³ par an (SISPEA, synthèse sur notre-environnement.gouv.fr). C'est l'eau potable. La moyenne cache de forts écarts selon les départements, et une part des volumes dits domestiques peut venir de petites activités qui ne sont pas le ménage."
+        },
+        {
+          "title": "Ce qu'une cuve ne remplace pas",
+          "body": "Boire, cuisiner, laver la vaisselle et se laver restent sur le réseau d'eau potable. Choisir un récupérateur d'eau de pluie comme s'il devait fournir ces 150 litres par personne surdimensionne la cuve, au-delà de ce que le toit peut remplir et de ce que la réglementation autorise."
+        },
+        {
+          "title": "Ce que le calculateur compte",
+          "body": "Le champ « Taille du foyer » multiplie seulement les usages cochés : 25 litres par personne et par jour pour les WC, 15 litres pour le lave-linge. Le jardin est un forfait de 60 litres par jour pour le foyer, pas par personne. La cuve proposée est ensuite une réserve d'environ 21 jours, plafonnée par l'eau que la toiture collecte vraiment."
+        }
+      ],
+      "assumptions": "Les 25 L, 15 L et 60 L sont les hypothèses de WaterPulse pour estimer un besoin, pas une statistique nationale.",
+      "sourcesLabel": "Sources",
+      "sources": [
+        {
+          "label": "Notre-environnement (ministère), consommation des ménages en eau potable",
+          "href": "https://www.notre-environnement.gouv.fr/themes/societe/le-mode-de-vie-des-menages-ressources/article/quelle-est-la-consommation-des-menages-en-eau-potable"
+        },
+        {
+          "label": "Service Public, Récupération de l'eau de pluie",
+          "href": "https://www.service-public.gouv.fr/particuliers/vosdroits/F31481"
+        }
+      ]
+    },
     "faq": {
-      "title": "Questions fréquentes",
-      "lead": "Pluie, volume de cuve et règles d'usage en France, en Suisse et au Luxembourg.",
+      "title": "Questions fréquentes sur le récupérateur et la cuve",
+      "lead": "Récupération d'eau de pluie, volume de cuve et règles d'usage en France, en Suisse et au Luxembourg.",
       "items": [
+        {
+          "question": "Qu'est-ce qu'un récupérateur d'eau de pluie ?",
+          "answer": "C'est l'équipement qui collecte l'eau d'une toiture inaccessible, en général par les gouttières, et la stocke dans une cuve. Service Public distingue le récupérateur sans branchement, limité aux usages extérieurs, et celui raccordé à la maison pour les WC, le lavage des sols et le linge. La cuve peut être hors sol ou enterrée ; l'enterrée a en général une plus grande capacité. Certaines communes exigent un couvercle et une protection contre les moustiques. WaterPulse ne vend pas de modèle : il estime le volume à partir de votre toit."
+        },
+        {
+          "question": "Comment fonctionne la récupération d'eau de pluie ?",
+          "answer": "L'eau qui ruisselle du toit est filtrée grossièrement, puis stockée dans la cuve. Sur une année, l'eau collectable vaut la surface (m²) × la pluie locale (mm) × un coefficient de couverture × 0,9. Un millimètre sur 1 m² fait 1 litre. Le calculateur applique cette formule au point placé sur la carte, puis propose une réserve proche de 21 jours d'usage."
+        },
+        {
+          "question": "La consommation d'eau par personne détermine-t-elle la cuve ?",
+          "answer": "Seulement pour les usages que l'eau de pluie peut couvrir. En France, la consommation domestique d'eau potable était d'environ 150 litres par habitant et par jour en 2022, soit 54,6 m³ par an (SISPEA). Boire, cuisiner, la vaisselle et la toilette ne passent pas par la cuve. Le calculateur retient 25 litres par personne et par jour pour les WC et 15 litres pour le lave-linge, plus 60 litres par jour pour le jardin du foyer. Le toit plafonne ensuite ce besoin."
+        },
         {
           "question": "Comment est calculée l'eau collectable ?",
           "answer": "Eau collectable (L/an) = surface de toiture (m²) × précipitations (mm) × coefficient de toiture × 0,9 (filtration). Un millimètre d'eau sur 1 m² représente 1 litre."
@@ -100,7 +150,7 @@
         },
         {
           "question": "Que peut-on faire de l'eau de pluie, et quelles règles s'appliquent ?",
-          "answer": "L'eau de pluie récupérée sur un toit n'est pas potable. En France, l'arrêté du 21 août 2008 permet de l'utiliser dehors (arrosage, lavage) et, dans la maison, pour les WC et le lavage des sols, si la toiture n'est pas en amiante-ciment ni en plomb. Le lave-linge n'est prévu qu'à titre expérimental, avec un traitement adapté : ce n'est pas un usage libre. Cette eau ne doit pas servir à boire, cuisiner, faire la vaisselle ou se laver, et son réseau doit rester séparé de l'eau potable, avec la mention « eau non potable ». Si l'installation est raccordée et que l'eau utilisée à l'intérieur part vers l'assainissement collectif, une déclaration en mairie est nécessaire (service-public.fr, fiche Récupération de l'eau de pluie). En Suisse, l'arrosage et souvent les WC sont admis, mais la construction et l'infiltration dépendent du canton et de la commune ; l'eau de boisson relève d'une autre législation. Au Luxembourg, l'usage au jardin est courant ; un usage dans la maison doit respecter la séparation avec l'eau potable et le règlement communal. Le service des eaux local reste la référence. WaterPulse estime un volume, il ne valide pas une installation."
+          "answer": "L'eau de pluie récupérée sur un toit n'est pas potable. En France, Service Public (fiche « Récupération de l'eau de pluie », vérifiée le 12 décembre 2025) distingue deux cas. Sans branchement intérieur : arrosage, nettoyage extérieur, lavage du véhicule au domicile, fontaine décorative non destinée à la boisson. Avec branchement : WC, lavage des sols et lavage du linge. Il reste interdit de la boire, de cuisiner, de faire la vaisselle ou de se laver. Le réseau doit être séparé de l'eau potable, signalé « eau non potable », et un récupérateur raccordé se déclare en mairie. Ce cadre vient du décret n° 2024-796 et de l'arrêté du 12 juillet 2024, qui ont remplacé l'arrêté du 21 août 2008. En Suisse, l'arrosage et souvent les WC sont admis, mais la construction dépend du canton et de la commune. Au Luxembourg, l'usage au jardin est courant ; un usage dans la maison doit rester séparé de l'eau potable et suivre le règlement communal. Le service des eaux local fait foi. WaterPulse estime un volume, il ne valide pas une installation."
         },
         {
           "question": "Récupérateur, cuve ou citerne : que choisir ?",

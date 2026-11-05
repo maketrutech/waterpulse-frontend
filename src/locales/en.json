@@ -1,12 +1,12 @@
 {
   "seo": {
-    "title": "Rainwater tank sizing | Free calculator",
-    "description": "Estimate a rainwater tank from your roof, local rainfall (France, Switzerland, Luxembourg) and how you use the water. From a water butt to a cistern.",
-    "keywords": "rainwater tank, rainwater harvesting, water butt, rainwater cistern, tank sizing, rainwater calculator, France, Switzerland, Luxembourg",
+    "title": "Rainwater butt and tank | Free calculator",
+    "description": "Size a rainwater butt or tank from your roof and local rainfall (France, Switzerland, Luxembourg). A practical guide to rainwater harvesting.",
+    "keywords": "rainwater butt, rainwater tank, rainwater harvesting, water butt, rainwater cistern, rainwater calculator, tank sizing",
     "featureList": [
-      "Free rainwater tank calculation",
+      "Free sizing for a rainwater butt or tank",
       "Sizing from roof area and local rainfall",
-      "Guidance from a water butt to a cistern",
+      "Guidance from an above-ground butt to a buried tank",
       "France, Switzerland and Luxembourg"
     ]
   },
@@ -16,26 +16,33 @@
     "switchTo": "Switch language"
   },
   "hero": {
-    "title": "Rainwater tank calculator",
-    "subtitle": "Free sizing from your roof and local rainfall, in France, Switzerland and Luxembourg.",
+    "title": "Rainwater butt and tank",
+    "subtitle": "Free rainwater harvesting calculator from your roof and local rainfall, in France, Switzerland and Luxembourg.",
     "cta": "Start the calculation"
   },
   "homeSeo": {
+    "jumpLabel": "On this page",
+    "jumps": [
+      { "href": "#calculateur", "label": "Calculator" },
+      { "href": "#taille-cuve", "label": "Tank size" },
+      { "href": "#consommation-eau", "label": "Water per person" },
+      { "href": "#faq", "label": "Questions" }
+    ],
     "intro": {
-      "title": "Rainwater harvesting: from a water butt to a cistern",
-      "body": "WaterPulse estimates how much water a roof can collect and which tank fits. Enter a place in France, Switzerland, Luxembourg or elsewhere, the roof area and the uses (garden, toilet, laundry). The calculation uses Open-Meteo rainfall and suggests a volume close to a 21-day reserve, from a small water butt to a cistern of several thousand litres."
+      "title": "Rainwater harvesting: from a water butt to a tank",
+      "body": "WaterPulse estimates how much water a roof can collect and which rainwater tank fits. A water butt is that collection path — downpipe, filter, storage — whether it feeds a small garden barrel or a tank of several thousand litres. Enter a place in France, Switzerland, Luxembourg or elsewhere, the roof area, the household size and the uses (garden, toilet, laundry). The calculation uses Open-Meteo rainfall and suggests a volume close to a 21-day reserve. The same form covers the whole range."
     },
     "how": {
-      "title": "How do you size a rainwater tank?",
-      "lead": "A rainwater tank calculation needs three inputs: the roof, local rainfall, and what you will use the water for. The volume is then compared with common sizes, from 300 L to 10,000 L.",
+      "title": "How do you size a rainwater butt or tank?",
+      "lead": "The calculation needs three inputs: the roof, local rainfall, and the uses rainwater can actually cover. The volume is then compared with common sizes, from 300 L to 10,000 L.",
       "steps": [
         {
           "title": "1. Locate your roof",
           "body": "Pick a country and a city, or drop a point on the map. WaterPulse loads average rainfall (mm/year) from Open-Meteo for that exact place, not a national average."
         },
         {
-          "title": "2. Describe the roof and uses",
-          "body": "Enter the area in m² and the roof type (tiles, flat, metal). Tick garden, toilets and laundry: they do not draw the same amount of water, and not every use is allowed everywhere."
+          "title": "2. Describe the roof, household and uses",
+          "body": "Enter the area in m², the roof type (tiles, flat, metal) and how many people live there. Tick garden, toilets and laundry: only those uses count as demand, and they are not all allowed in the same way."
         },
         {
           "title": "3. Read the tank volume",
@@ -44,8 +51,9 @@
       ]
     },
     "sizing": {
-      "title": "What size rainwater tank should you choose?",
-      "lead": "There is no standard tank. The right volume is one the roof can fill and that you use before the next real spell of rain. A water butt of a few hundred litres waters a garden. A cistern of several thousand litres starts to cover toilets.",
+      "title": "What size rainwater butt or tank should you choose?",
+      "lead": "There is no standard tank. The right volume is one the roof can fill and that you use before the next real spell of rain. A water butt of a few hundred litres waters a garden. A tank of several thousand litres starts to cover toilets.",
+      "compare": "A rainwater butt is most often an above-ground tank under a downpipe. Service Public also describes a buried tank, usually with more capacity, whether or not it is connected inside the house. These ranges help you read the result. They are not a price: cost depends on the model, the installation and the municipality, and WaterPulse does not estimate it.",
       "factors": [
         {
           "title": "Roof area",
@@ -82,10 +90,52 @@
       "note": "Two 80 m² roofs do not need the same tank if one is in Luxembourg and the other in Valais. These ranges place the result; they do not replace it.",
       "cta": "Calculate my tank size"
     },
+    "usage": {
+      "title": "Water use per person and tank size",
+      "lead": "Water use per person only matters here for the uses rainwater can cover. It does not tell you which tank to buy.",
+      "points": [
+        {
+          "title": "Tap water, in France",
+          "body": "In 2022, average domestic drinking-water use in France was about 150 litres per person per day, or 54.6 m³ a year (SISPEA, summarised on notre-environnement.gouv.fr). That is potable water. The average hides large gaps between departments, and some of the volume labelled domestic can come from small non-household activities."
+        },
+        {
+          "title": "What a tank does not replace",
+          "body": "Drinking, cooking, dishwashing and washing yourself stay on the drinking-water supply. Sizing a rainwater butt as if it had to provide those 150 litres per person makes the tank larger than the roof can fill, and larger than the rules allow."
+        },
+        {
+          "title": "What the calculator counts",
+          "body": "The household-size field only multiplies the uses you tick: 25 litres per person per day for toilets, 15 litres for laundry. The garden is a flat 60 litres per day for the household, not per person. The suggested tank is then about 21 days of reserve, capped by the water the roof actually collects."
+        }
+      ],
+      "assumptions": "The 25 L, 15 L and 60 L figures are WaterPulse assumptions for estimating demand, not a national statistic.",
+      "sourcesLabel": "Sources",
+      "sources": [
+        {
+          "label": "Notre-environnement (French environment ministry), household drinking-water use",
+          "href": "https://www.notre-environnement.gouv.fr/themes/societe/le-mode-de-vie-des-menages-ressources/article/quelle-est-la-consommation-des-menages-en-eau-potable"
+        },
+        {
+          "label": "Service Public, rainwater harvesting (France)",
+          "href": "https://www.service-public.gouv.fr/particuliers/vosdroits/F31481"
+        }
+      ]
+    },
     "faq": {
-      "title": "Frequently asked questions",
-      "lead": "Rainfall, tank volume and rules of use in France, Switzerland and Luxembourg.",
+      "title": "Questions about the water butt and the tank",
+      "lead": "Rainwater harvesting, tank volume and rules of use in France, Switzerland and Luxembourg.",
       "items": [
+        {
+          "question": "What is a rainwater butt?",
+          "answer": "It is the equipment that collects water from a roof people cannot walk on, usually through the downpipes, and stores it in a tank. Service Public distinguishes a butt with no indoor connection, limited to outdoor uses, from one connected to the house for toilets, floor washing and laundry. The tank can sit above ground or be buried; a buried tank usually holds more. Some municipalities require a lid and mosquito protection. WaterPulse does not sell a model: it estimates the volume from your roof."
+        },
+        {
+          "question": "How does rainwater harvesting work?",
+          "answer": "Water running off the roof is coarsely filtered, then stored in the tank. Over a year, collectable water equals area (m²) × local rainfall (mm) × a roof coefficient × 0.9. One millimetre on 1 m² is 1 litre. The calculator applies that formula to the point you place on the map, then suggests a reserve close to 21 days of use."
+        },
+        {
+          "question": "Does water use per person set the tank size?",
+          "answer": "Only for the uses rainwater can cover. In France, domestic drinking-water use was about 150 litres per person per day in 2022, or 54.6 m³ a year (SISPEA). Drinking, cooking, dishes and personal washing do not go through the tank. The calculator uses 25 litres per person per day for toilets and 15 litres for laundry, plus 60 litres per day for the household garden. The roof then caps that demand."
+        },
         {
           "question": "How is collectable water calculated?",
           "answer": "Collectable water (L/year) = roof area (m²) × rainfall (mm) × roof coefficient × 0.9 (filtration). One millimetre on 1 m² equals 1 litre."
@@ -100,7 +150,7 @@
         },
         {
           "question": "What can rainwater be used for, and which rules apply?",
-          "answer": "Rainwater collected from a roof is not drinking water. In France, the order of 21 August 2008 allows outdoor use (watering, washing) and, indoors, toilets and floor washing, provided the roof is not asbestos-cement or lead. Laundry is only foreseen on an experimental basis, with suitable treatment: it is not a general right. This water must not be used for drinking, cooking, dishwashing or washing yourself, and its pipes must stay separate from drinking water, labelled “non-potable water”. If the system is connected and water used indoors goes to the public sewer, you need to declare it at the town hall (service-public.fr, page “Récupération de l'eau de pluie”). In Switzerland, watering and often toilets are accepted, but building and infiltration rules depend on the canton and the municipality; drinking water is a different law. In Luxembourg, garden use is common; use inside the house must keep rainwater separate from drinking water and follow municipal rules. The local water service is the reference. WaterPulse estimates a volume; it does not approve an installation."
+          "answer": "Rainwater collected from a roof is not drinking water. In France, Service Public (page “Récupération de l'eau de pluie”, checked on 12 December 2025) distinguishes two cases. With no indoor connection: watering, outdoor cleaning, washing a vehicle at home, and a decorative fountain not meant for drinking. With a connection: toilets, floor washing and laundry. It is still forbidden to drink it, cook with it, wash dishes or wash yourself. The pipes must stay separate from drinking water, labelled “non-potable water”, and a connected system is declared at the town hall. That framework comes from decree no. 2024-796 and the order of 12 July 2024, which replaced the order of 21 August 2008. In Switzerland, watering and often toilets are accepted, but building rules depend on the canton and the municipality. In Luxembourg, garden use is common; use inside the house must stay separate from drinking water and follow municipal rules. The local water service is the reference. WaterPulse estimates a volume; it does not approve an installation."
         },
         {
           "question": "Water butt, tank or cistern: which one?",

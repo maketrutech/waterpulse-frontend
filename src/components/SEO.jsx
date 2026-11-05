@@ -3,7 +3,8 @@ import { useTranslation } from 'react-i18next';
 import { SITE_URL, buildLangHref } from '../utils/langUrl';
 
 const DEFAULT_OG_IMAGE = `${SITE_URL}/og-image.png`;
-const OG_IMAGE_ALT = "WaterPulse — Calculateur gratuit de récupération d'eau de pluie";
+const OG_IMAGE_ALT =
+  "WaterPulse — Calculateur gratuit de récupérateur et de cuve d'eau de pluie";
 
 /**
  * Métadonnées SEO. L'URL indexable est toujours la version française :
@@ -33,7 +34,7 @@ export default function SEO({
     name: 'WaterPulse',
     alternateName: isEn
       ? 'Free rainwater tank calculator'
-      : "Calculateur de cuve d'eau de pluie",
+      : "Calculateur de récupérateur et de cuve d'eau de pluie",
     applicationCategory: 'UtilitiesApplication',
     operatingSystem: 'Any',
     url: SITE_URL,
