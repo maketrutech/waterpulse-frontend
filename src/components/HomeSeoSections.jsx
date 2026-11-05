@@ -8,14 +8,20 @@ import { useTranslation } from 'react-i18next';
 export default function HomeSeoSections() {
   const { t, i18n } = useTranslation();
 
+  const jumps = t('homeSeo.jumps', { returnObjects: true });
   const steps = t('homeSeo.how.steps', { returnObjects: true });
   const factors = t('homeSeo.sizing.factors', { returnObjects: true });
   const sizes = t('homeSeo.sizing.sizes', { returnObjects: true });
+  const usagePoints = t('homeSeo.usage.points', { returnObjects: true });
+  const sources = t('homeSeo.usage.sources', { returnObjects: true });
   const faqItems = t('homeSeo.faq.items', { returnObjects: true });
 
+  const safeJumps = Array.isArray(jumps) ? jumps : [];
   const safeSteps = Array.isArray(steps) ? steps : [];
   const safeFactors = Array.isArray(factors) ? factors : [];
   const safeSizes = Array.isArray(sizes) ? sizes : [];
+  const safeUsage = Array.isArray(usagePoints) ? usagePoints : [];
+  const safeSources = Array.isArray(sources) ? sources : [];
   const safeFaq = Array.isArray(faqItems) ? faqItems : [];
 
   const faqJsonLd = {
@@ -54,6 +60,22 @@ export default function HomeSeoSections() {
         <p className="mt-2 max-w-3xl text-sm leading-relaxed text-sky-deep/75 sm:text-base">
           {t('homeSeo.intro.body')}
         </p>
+        {safeJumps.length > 0 && (
+          <nav
+            aria-label={t('homeSeo.jumpLabel')}
+            className="mt-4 flex flex-wrap gap-x-4 gap-y-1 text-sm font-semibold"
+          >
+            {safeJumps.map((jump) => (
+              <a
+                key={jump.href}
+                href={jump.href}
+                className="inline-flex min-h-12 items-center text-sky-mid underline-offset-2 hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-sky-mid"
+              >
+                {jump.label}
+              </a>
+            ))}
+          </nav>
+        )}
       </section>
 
       <section
@@ -102,6 +124,9 @@ export default function HomeSeoSections() {
         <p className="mt-2 max-w-3xl text-sm leading-relaxed text-sky-deep/75 sm:text-base">
           {t('homeSeo.sizing.lead')}
         </p>
+        <p className="mt-3 max-w-3xl text-sm leading-relaxed text-sky-deep/75 sm:text-base">
+          {t('homeSeo.sizing.compare')}
+        </p>
 
         <div className="mt-5 space-y-4">
           {safeFactors.map((factor) => (
@@ -133,6 +158,54 @@ export default function HomeSeoSections() {
         >
           {t('homeSeo.sizing.cta')}
         </a>
+      </section>
+
+      <section
+        id="consommation-eau"
+        aria-labelledby="home-seo-usage-title"
+        className="mx-auto mt-8 max-w-4xl px-4 sm:px-6"
+      >
+        <h2
+          id="home-seo-usage-title"
+          className="font-display text-2xl font-bold text-sky-deep sm:text-3xl"
+        >
+          {t('homeSeo.usage.title')}
+        </h2>
+        <p className="mt-2 max-w-3xl text-sm leading-relaxed text-sky-deep/75 sm:text-base">
+          {t('homeSeo.usage.lead')}
+        </p>
+        <div className="mt-5 space-y-4">
+          {safeUsage.map((point) => (
+            <div key={point.title}>
+              <h3 className="font-display text-lg font-bold text-sky-deep">{point.title}</h3>
+              <p className="mt-1.5 text-sm leading-relaxed text-sky-deep/70 sm:text-base">
+                {point.body}
+              </p>
+            </div>
+          ))}
+        </div>
+        <p className="mt-4 max-w-3xl text-sm leading-relaxed text-sky-deep/75 sm:text-base">
+          {t('homeSeo.usage.assumptions')}
+        </p>
+        {safeSources.length > 0 && (
+          <div className="mt-3 max-w-3xl text-sm leading-relaxed text-sky-deep/70">
+            <p className="font-semibold text-sky-deep">{t('homeSeo.usage.sourcesLabel')}</p>
+            <ul className="mt-1 space-y-1">
+              {safeSources.map((source) => (
+                <li key={source.href}>
+                  <a
+                    href={source.href}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex min-h-12 items-center text-sky-mid underline-offset-2 hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-sky-mid"
+                  >
+                    {source.label}
+                  </a>
+                </li>
+              ))}
+            </ul>
+          </div>
+        )}
       </section>
 
       <section

@@ -27,6 +27,7 @@ const routes = [
       fr.homeSeo.sizing.title,
       fr.homeSeo.sizing.sizes[0].range,
       fr.homeSeo.faq.title,
+      fr.homeSeo.usage.title,
       fr.homeSeo.faq.items[0].question,
       fr.homeSeo.faq.items[0].answer,
       fr.seo.title,
