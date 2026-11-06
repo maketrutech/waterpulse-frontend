@@ -9,6 +9,8 @@ const PRERENDERED_ROUTES = {
   '/about/': '/about.html',
   '/privacy': '/privacy.html',
   '/privacy/': '/privacy.html',
+  '/mentions-legales': '/mentions-legales.html',
+  '/mentions-legales/': '/mentions-legales.html',
   '/terms': '/terms.html',
   '/terms/': '/terms.html',
 };
@@ -22,6 +24,9 @@ const KNOWN_PAGES = new Set([
   '/privacy',
   '/privacy/',
   '/privacy.html',
+  '/mentions-legales',
+  '/mentions-legales/',
+  '/mentions-legales.html',
   '/terms',
   '/terms/',
   '/terms.html',

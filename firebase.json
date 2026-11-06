@@ -19,6 +19,11 @@
         "type": 301
       },
       {
+        "source": "/mentions-legales.html",
+        "destination": "/mentions-legales",
+        "type": 301
+      },
+      {
         "source": "/terms.html",
         "destination": "/terms",
         "type": 301
@@ -40,6 +45,14 @@
       {
         "source": "/privacy/",
         "destination": "/privacy.html"
+      },
+      {
+        "source": "/mentions-legales",
+        "destination": "/mentions-legales.html"
+      },
+      {
+        "source": "/mentions-legales/",
+        "destination": "/mentions-legales.html"
       },
       {
         "source": "/terms",

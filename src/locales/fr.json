@@ -23,10 +23,22 @@
   "homeSeo": {
     "jumpLabel": "Dans cette page",
     "jumps": [
-      { "href": "#calculateur", "label": "Calculateur" },
-      { "href": "#taille-cuve", "label": "Taille de cuve" },
-      { "href": "#consommation-eau", "label": "Eau par personne" },
-      { "href": "#faq", "label": "Questions" }
+      {
+        "href": "#calculateur",
+        "label": "Calculateur"
+      },
+      {
+        "href": "#taille-cuve",
+        "label": "Taille de cuve"
+      },
+      {
+        "href": "#consommation-eau",
+        "label": "Eau par personne"
+      },
+      {
+        "href": "#faq",
+        "label": "Questions"
+      }
     ],
     "intro": {
       "title": "Récupération d'eau de pluie : du récupérateur à la cuve",
@@ -188,7 +200,8 @@
     "links": {
       "about": "À propos",
       "privacy": "Confidentialité",
-      "terms": "Conditions d'utilisation"
+      "terms": "Conditions d'utilisation",
+      "mentions": "Mentions légales"
     }
   },
   "legal": {
@@ -267,6 +280,46 @@
       "send": "Envoyer par e-mail",
       "mailSubject": "Contact WaterPulse — {{name}}",
       "mailFrom": "De : {{name}}"
+    },
+    "mentions": {
+      "seoTitle": "Mentions légales | WaterPulse",
+      "seoDescription": "Éditeur, directeur de la publication et hébergeur de WaterPulse, calculateur d’eau de pluie édité par Maketru.",
+      "title": "Mentions légales",
+      "updated": "Dernière mise à jour : 6 novembre 2026",
+      "privacyLead": "Pour le traitement des données et les cookies, voir la",
+      "privacyLink": "politique de confidentialité",
+      "sections": [
+        {
+          "heading": "Éditeur",
+          "paragraphs": [
+            "Éditeur : Anwar (Maketru), particulier. Le site https://waterpulse.maketru.com est édité par Anwar (Maketru), particulier. Adresse électronique : contact@maketru.com."
+          ]
+        },
+        {
+          "heading": "Directeur de la publication",
+          "paragraphs": [
+            "Le directeur de la publication est Anwar, conformément à l’article 6 de la loi n° 2004-575 du 21 juin 2004 (LCEN). Contact : contact@maketru.com."
+          ]
+        },
+        {
+          "heading": "Hébergement",
+          "paragraphs": [
+            "Google Ireland Limited, service Firebase Hosting, Gordon House, Barrow Street, Dublin 4, Irlande. Téléphone : +353 1 543 1000. Site : https://firebase.google.com."
+          ]
+        },
+        {
+          "heading": "Propriété",
+          "paragraphs": [
+            "Les textes, le nom WaterPulse et le code original sont la propriété de Maketru, sauf mention. Les marques citées restent à leurs titulaires."
+          ]
+        },
+        {
+          "heading": "Responsabilité",
+          "paragraphs": [
+            "WaterPulse fournit une estimation indicative de récupération d’eau de pluie et de dimensionnement de cuve. Les résultats ne constituent pas un dimensionnement professionnel, ni un conseil juridique ou technique. L’utilisateur reste responsable de toute décision d’investissement ou d’installation. L’outil est gratuit."
+          ]
+        }
+      ]
     }
   },
   "form": {
@@ -291,9 +344,18 @@
     "roofType": "Type de toit",
     "roofHint": "Le coefficient influence l'eau réellement collectée.",
     "roofs": {
-      "tiles": { "label": "Tuiles", "hint": "Coef. {{coef}}" },
-      "flat": { "label": "Toit plat", "hint": "Coef. {{coef}}" },
-      "metal": { "label": "Métal", "hint": "Coef. {{coef}}" }
+      "tiles": {
+        "label": "Tuiles",
+        "hint": "Coef. {{coef}}"
+      },
+      "flat": {
+        "label": "Toit plat",
+        "hint": "Coef. {{coef}}"
+      },
+      "metal": {
+        "label": "Métal",
+        "hint": "Coef. {{coef}}"
+      }
     },
     "usages": "Usages de l'eau récupérée",
     "usagesHint": "Cochez les usages pour estimer vos besoins annuels.",
@@ -332,7 +394,20 @@
     "liters": "L",
     "litersYear": "L/an",
     "monthlyTitle": "Pluie mensuelle moyenne",
-    "months": ["J", "F", "M", "A", "M", "J", "J", "A", "S", "O", "N", "D"]
+    "months": [
+      "J",
+      "F",
+      "M",
+      "A",
+      "M",
+      "J",
+      "J",
+      "A",
+      "S",
+      "O",
+      "N",
+      "D"
+    ]
   },
   "errors": {
     "network": "Impossible de joindre le serveur API.",

@@ -23,10 +23,22 @@
   "homeSeo": {
     "jumpLabel": "On this page",
     "jumps": [
-      { "href": "#calculateur", "label": "Calculator" },
-      { "href": "#taille-cuve", "label": "Tank size" },
-      { "href": "#consommation-eau", "label": "Water per person" },
-      { "href": "#faq", "label": "Questions" }
+      {
+        "href": "#calculateur",
+        "label": "Calculator"
+      },
+      {
+        "href": "#taille-cuve",
+        "label": "Tank size"
+      },
+      {
+        "href": "#consommation-eau",
+        "label": "Water per person"
+      },
+      {
+        "href": "#faq",
+        "label": "Questions"
+      }
     ],
     "intro": {
       "title": "Rainwater harvesting: from a water butt to a tank",
@@ -188,7 +200,8 @@
     "links": {
       "about": "About",
       "privacy": "Privacy",
-      "terms": "Terms of use"
+      "terms": "Terms of use",
+      "mentions": "Legal notice"
     }
   },
   "legal": {
@@ -267,6 +280,46 @@
       "send": "Send by email",
       "mailSubject": "WaterPulse contact — {{name}}",
       "mailFrom": "From: {{name}}"
+    },
+    "mentions": {
+      "seoTitle": "Legal notice | WaterPulse",
+      "seoDescription": "Publisher, publication director and host of WaterPulse, rainwater tank calculator by Maketru.",
+      "title": "Legal notice",
+      "updated": "Last updated: 6 November 2026",
+      "privacyLead": "For data processing and cookies, see the",
+      "privacyLink": "privacy policy",
+      "sections": [
+        {
+          "heading": "Publisher",
+          "paragraphs": [
+            "Publisher: Anwar (Maketru), individual. The site https://waterpulse.maketru.com is published by Anwar (Maketru), individual. Email: contact@maketru.com."
+          ]
+        },
+        {
+          "heading": "Publication director",
+          "paragraphs": [
+            "The publication director is Anwar, pursuant to article 6 of French law no. 2004-575 of 21 June 2004 (LCEN). Contact: contact@maketru.com."
+          ]
+        },
+        {
+          "heading": "Hosting",
+          "paragraphs": [
+            "Google Ireland Limited, Firebase Hosting, Gordon House, Barrow Street, Dublin 4, Ireland. Phone: +353 1 543 1000. Website: https://firebase.google.com."
+          ]
+        },
+        {
+          "heading": "Ownership",
+          "paragraphs": [
+            "The texts, the WaterPulse name and the original code are the property of Maketru, unless otherwise stated. Third-party trademarks remain with their owners."
+          ]
+        },
+        {
+          "heading": "Liability",
+          "paragraphs": [
+            "WaterPulse provides an indicative estimate of rainwater harvesting and tank sizing. Results are not a professional design, nor legal or technical advice. The user remains responsible for any investment or installation decision. The tool is free."
+          ]
+        }
+      ]
     }
   },
   "form": {
@@ -291,9 +344,18 @@
     "roofType": "Roof type",
     "roofHint": "The coefficient affects how much water is actually collected.",
     "roofs": {
-      "tiles": { "label": "Tiles", "hint": "Coef. {{coef}}" },
-      "flat": { "label": "Flat roof", "hint": "Coef. {{coef}}" },
-      "metal": { "label": "Metal", "hint": "Coef. {{coef}}" }
+      "tiles": {
+        "label": "Tiles",
+        "hint": "Coef. {{coef}}"
+      },
+      "flat": {
+        "label": "Flat roof",
+        "hint": "Coef. {{coef}}"
+      },
+      "metal": {
+        "label": "Metal",
+        "hint": "Coef. {{coef}}"
+      }
     },
     "usages": "Rainwater uses",
     "usagesHint": "Select uses to estimate yearly needs.",
@@ -332,7 +394,20 @@
     "liters": "L",
     "litersYear": "L/year",
     "monthlyTitle": "Average monthly rainfall",
-    "months": ["J", "F", "M", "A", "M", "J", "J", "A", "S", "O", "N", "D"]
+    "months": [
+      "J",
+      "F",
+      "M",
+      "A",
+      "M",
+      "J",
+      "J",
+      "A",
+      "S",
+      "O",
+      "N",
+      "D"
+    ]
   },
   "errors": {
     "network": "Unable to reach the API server.",

@@ -7,6 +7,7 @@ export default function Footer() {
   const links = [
     { to: '/about', label: t('footer.links.about') },
     { to: '/privacy', label: t('footer.links.privacy') },
+    { to: '/mentions-legales', label: t('footer.links.mentions') },
     { to: '/terms', label: t('footer.links.terms') },
   ];
 

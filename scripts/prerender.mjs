@@ -56,6 +56,15 @@ const routes = [
     canonical: 'https://waterpulse.maketru.com/privacy',
   },
   {
+    url: '/mentions-legales',
+    file: 'mentions-legales.html',
+    minWords: 40,
+    h1: fr.legal.mentions.title,
+    mustInclude: [fr.legal.mentions.sections[0].paragraphs[0], fr.legal.mentions.seoDescription],
+    jsonLdTypes: ['WebApplication'],
+    canonical: 'https://waterpulse.maketru.com/mentions-legales',
+  },
+  {
     url: '/terms',
     file: 'terms.html',
     minWords: 30,
@@ -253,6 +262,7 @@ const indexableUrls = [
   'https://waterpulse.maketru.com/',
   'https://waterpulse.maketru.com/about',
   'https://waterpulse.maketru.com/privacy',
+  'https://waterpulse.maketru.com/mentions-legales',
   'https://waterpulse.maketru.com/terms',
 ];
 for (const loc of indexableUrls) {
